@@ -1,3 +1,4 @@
+
 FROM ubuntu:latest
 MAINTAINER Felix Francis <felixfrancier@gmail.com>
 
@@ -16,6 +17,6 @@ RUN wget --content-disposition http://bioinfo.ut.ee/download/dl.php?file=24
 RUN tar xzf multiplx_linux_64_20101011.tar.gz
 RUN rm -rf multiplx_linux_64_20101011.tar.gz
 
-# Install BLASTn
+# Install BLASTn 
 RUN apt-get install -y ncbi-blast+
 RUN PATH=$PATH:~/opt/bin
