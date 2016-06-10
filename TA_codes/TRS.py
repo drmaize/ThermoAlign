@@ -1,4 +1,4 @@
-### TRS: Extract genomic Locus and mask HapMap polymorphic sites
+### TRS: extract targeted region and mask vcf polymorphic sites
 ### Version-1.05: 06/10/2016
 ### Authors: Felix Francis (felixfrancier@gmail.com); Randall J. Wisser (rjw@udel.edu) 
 
@@ -130,14 +130,5 @@ if __name__ == '__main__':
 
     ### Copy parameters file into the timestamp directory
     shutil.copy2('./parameters.py', str('./'+time_stamp + '/parameters.py'))
-    
-    
-    
-### Change log
-### v1.02 -> v1.03
-    # B73v2 to B73v3 transition
-    # HapMap2 to HapMap3 transition
-### v1.03 -> v1.04
-    # summary file records indels and SNPs in locus
 
     
