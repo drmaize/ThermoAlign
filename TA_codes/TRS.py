@@ -1,10 +1,6 @@
 ### TRS: Extract genomic Locus and mask HapMap polymorphic sites
-### Updated: version-1.04 05/04/2016
-### Property of Wisser Lab at University of Delaware
-### Author: Felix Francis (felixfrancier@gmail.com)
-#    Copyright (C) 2016-2030 by
-#    Felix Francis <felixfrancier@gmail.com>
-#    All rights reserved.
+### Version-1.05: 06/10/2016
+### Author: Felix Francis (felixfrancier@gmail.com); Under the guidance and financial support of Randall J Wisser (rjw@udel.edu) 
 
 ### Import functions
 import shutil
