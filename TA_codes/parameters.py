@@ -3,29 +3,25 @@
 ##########################################################
 
 ### path to required files
-# refDB_path          =   "/mnt/data27/ffrancis/ZmDB_RefGenv3_renamed/"
-# hapmap_path         =   "/mnt/data27/ffrancis/HapMap3/all_lines/processed_hapmap_files/"
-# multiplx_path       =   "/home/ffrancis/softwares/multiplx/"
 refDB_path          =   "../sample_genome/"
-hapmap_path         =   "../hapmap_vcf_sample/processed_hapmap_files/"
+variant_path        =   "../vcf_sample/processed_vcf_files/"
 multiplx_path       =   "../"
 
 ## target region selection 
-chr_no              =   3           # fast test
-start_pos           =   100    # fast test
-stop_pos            =   1000    # fast test
-no_chrs_in_genome   =   5           # specify the number of chromosomes in the genome used
-hapmap_mask_condition = 1       #(1:Yes; 0:No)   
-flanking_primers    =   0       #(1:Yes; 0:No)
-flanking_size       =   2000
+chr_no                  =   3       # fast test
+start_pos               =   100     # fast test
+stop_pos                =   1000    # fast test
+no_chrs_in_genome       =   5       # specify the number of chromosomes in the genome used
+variant_mask_condition  =   1       #(1:Yes; 0:No)   
+flanking_primers        =   0       #(1:Yes; 0:No)
+flanking_size           =   2000
                               
 ### PCR conditions
 primer_size_range   =   "24-25"
 GC_range            =   "40-55"
-Tm_range            =   "64-70" 
-# Tm_range            =   "68-70" 
+Tm_range            =   "68-70"
 
-### NN Tm parameters NEB Wisser lab
+### NN Tm parameters standardized reaction conditions (NEB cat#)
 primer_conc         =   100    #nM  
 Na                  =   0      #mM
 K                   =   50     #mM
@@ -59,7 +55,7 @@ mp_reward           =   1
 mp_penalty          =   -1
 mp_num_threads      =   5
 mp_perc_identity    =   70
-mp_max_target_seqs  =   13
+mp_max_target_seqs  =   5 ## ***** set to the total number of input fasta sequences *****
 mp_max_hsps         =   20
 
 ### primer pair picking parameters                               
