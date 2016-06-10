@@ -26,19 +26,19 @@ t0 = time.time()
 ############################################################
 
 
-input_path   =   "./hapmap_vcf/"
+input_path   =   "./sample_vcf/"
 
 
 def vcf2coords(input_file, input_path):
     file_name = input_file.split(".")[0]
     df = pd.read_csv(input_path + input_file, sep='\t', comment='#', skiprows=0, usecols=[1, 4], header=None)
     df.columns = ['coordinate', 'alternate_allele']
-    df.to_csv(input_path + 'processed_hapmap_files/' + file_name, sep='\t', encoding='utf-8', index=False)
+    df.to_csv(input_path + 'processed_vcf_files/' + file_name, sep='\t', encoding='utf-8', index=False)
 
 
 def vcf2coords_all(input_path):
-    if not os.path.exists(input_path + 'processed_hapmap_files/'):
-        os.makedirs(input_path + 'processed_hapmap_files/')
+    if not os.path.exists(input_path + 'processed_vcf_files/'):
+        os.makedirs(input_path + 'processed_vcf_files/')
     for file in os.listdir(input_path):
         if file.endswith(".vcf"):
             input_file = file
