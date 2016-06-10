@@ -161,7 +161,7 @@ if __name__ == '__main__':
         target_stop_pos     = 0
     
     ### Locus file name
-    locus       =    path + Time_stamp + "_" + str(chr_no) + "_" + str(start_pos) + "_" + str((stop_pos - start_pos)+1) +"_PolyMasked.fasta"
+    locus       =    path + Time_stamp + "_" + str(chr_no) + "_" + str(start_pos) + "_" + str((stop_pos - start_pos)+1) +"_VariantMasked.fasta"
     ### Query file path(SWGA primer path)
     query_path      = os.getcwd()   # after blastn db creation, need to get back to current working directory
 
