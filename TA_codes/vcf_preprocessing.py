@@ -1,6 +1,6 @@
 ### vcf processing: pre processes the vcf files so that it can be used by TA in an efficient manner
 ### Version-1.05: 06/10/2016
-### Author: Felix Francis (felixfrancier@gmail.com); Under the guidance and financial support of Randall J Wisser (rjw@udel.edu) 
+### Authors: Felix Francis (felixfrancier@gmail.com); Randall J. Wisser (rjw@udel.edu) 
 
 ### Input requirements: all the input vcf files must be named as chr1.vcf, chr2.vcf, ...; vcf files should follow the standard vcf format specified here https://samtools.github.io/hts-specs/VCFv4.2.pdf
 
