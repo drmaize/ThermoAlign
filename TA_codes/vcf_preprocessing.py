@@ -1,4 +1,4 @@
-### HapMap vcf processing: pre processes the HapMap vcf files so that it can be used by TA in an efficient manner
+### vcf processing: pre processes the vcf files so that it can be used by TA in an efficient manner
 ### Version-1.05: 06/10/2016
 ### Author: Felix Francis (felixfrancier@gmail.com); Under the guidance and financial support of Randall J Wisser (rjw@udel.edu) 
 
