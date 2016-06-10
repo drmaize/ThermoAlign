@@ -1,7 +1,6 @@
 ### HapMap vcf processing: pre processes the HapMap vcf files so that it can be used by TA in an efficient manner
-### Updated: version-1.04 01/21/2016
-### Property of Wisser Lab at University of Delaware
-### Author: Felix Francis (felixfrancier@gmail.com)
+### Version-1.05: 06/10/2016
+### Author: Felix Francis (felixfrancier@gmail.com); Under the guidance and financial support of Randall J Wisser (rjw@udel.edu) 
 
 ### Input requirements: all the input vcf files must be named as chr1.vcf, chr2.vcf, ...; vcf files should follow the standard vcf format specified here https://samtools.github.io/hts-specs/VCFv4.2.pdf
 
@@ -65,5 +64,6 @@ print '\n', "Time to run code = ", total, " seconds", '\n'
     
 ### Change log
 ### v1.03 -> v1.04 vcf to coord preprocessing
+### v1.04 -> v1.05 process any hcf files
 
     
