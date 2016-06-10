@@ -1,4 +1,4 @@
-### Target Region Selection module: selects targeted region and masks vcf polymorphic sites
+### Target Region Selection module: selects a targeted sequence in a genome and masks variant sites
 ### Version-1.05: 06/10/2016
 ### Authors: Felix Francis (felixfrancier@gmail.com); Randall J. Wisser (rjw@udel.edu) 
 
