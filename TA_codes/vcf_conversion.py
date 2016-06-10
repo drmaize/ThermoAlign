@@ -1,8 +1,11 @@
-### vcf processing: pre processes the vcf files so that it can be used by TA in an efficient manner
+### vcf_conversion: converts a vcf file to ThermoAlign input format
 ### Version-1.05: 06/10/2016
 ### Authors: Felix Francis (felixfrancier@gmail.com); Randall J. Wisser (rjw@udel.edu) 
 
-### Input requirements: all the input vcf files must be named as chr1.vcf, chr2.vcf, ...; vcf files should follow the standard vcf format specified here https://samtools.github.io/hts-specs/VCFv4.2.pdf
+### Requirements
+### vcf files should follow the format described here: https://samtools.github.io/hts-specs/VCFv4.2.pdf
+### all vcf input files must be named according to the corresponding fasta input files, e.g. chr1.vcf, chr2.vcf, ... 
+
 
 
 ### Import functions
