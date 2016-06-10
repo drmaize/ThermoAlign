@@ -259,7 +259,7 @@ if __name__ == '__main__':
 
     ### Locus file name
     locus_len   =   (stop_pos - start_pos)+1
-    locus       =    path + Time_stamp + "_" + str(chr_no) + "_" + str(start_pos) + "_" + str((stop_pos - start_pos)+1) +"_PolyMasked.fasta"
+    locus       =    path + Time_stamp + "_" + str(chr_no) + "_" + str(start_pos) + "_" + str((stop_pos - start_pos)+1) +"_VariantMasked.fasta"
 
     ############################################################
     # Output files
