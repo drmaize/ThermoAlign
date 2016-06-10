@@ -1,4 +1,4 @@
-### PPS: Primer Pair Selection (PPS); a part of Thermo-Align tool for the design of template specific hybridization and priming oligonucleotides
+### Primer Pair Selection module: extracts all possible oligonucleotides from a target region that are unique and expected to stably hybridize template DNA
 ### Version-1.05: 06/10/2016
 ### Authors: Felix Francis (felixfrancier@gmail.com); Randall J. Wisser (rjw@udel.edu) 
 
