@@ -4,7 +4,7 @@
 
 ### path to required files
 refDB_path          =   "../sample_genome/"
-variant_path        =   "../vcf_sample/processed_vcf_files/"
+variant_path        =   "../sample_vcf/processed_vcf_files/"
 multiplx_path       =   "../"
 
 ## target region selection 
