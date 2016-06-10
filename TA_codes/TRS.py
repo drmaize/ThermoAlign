@@ -35,7 +35,7 @@ def variant_mask(chr_no, start_pos, stop_pos, variant_path, refDB_path, write_pa
     indel_count = 0
     snp_count   = 0
     filename = "chr" + str(chr_no)                                                              
-    output_poly_masked = open(write_path + str(time_stamp)+"_"+ str(chr_no) + "_"+ str(start_pos) + "_"+ str((stop_pos-start_pos)+1) + "_PolyMasked.fasta", "w")
+    output_poly_masked = open(write_path + str(time_stamp)+"_"+ str(chr_no) + "_"+ str(start_pos) + "_"+ str((stop_pos-start_pos)+1) + "_VariantMasked.fasta", "w")
     output_poly_masked.write(str(">"+"TA_"+ str(chr_no) + "_"+ str(start_pos) + "_"+ str((stop_pos-start_pos)+1) + "_"+"VariantMasked"+'\n'))
     Locus = get_Locus(start_pos, stop_pos, chr_no, refDB_path)
     gap_count = Locus.count('N'*100)
