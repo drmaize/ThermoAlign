@@ -37,7 +37,7 @@ def check_compostion(string):
     else:
         return False
 
-### Function to check if >= 4 continuous dinucleotide/single base repeats (example: ATATAT/CCCC); returns 1 if it has repeats. else 0
+### Function to check if >= 4 continuous mono/single base repeats (example: ATATAT/CCCC); returns 1 if it has repeats. else 0
 def di_single_nucleo_repeat_filter(seq, filter_di_si_repeats = 1, di_si_repeats_threshold = 4):
     if filter_di_si_repeats == 1:
         filter_condition    =   0    
