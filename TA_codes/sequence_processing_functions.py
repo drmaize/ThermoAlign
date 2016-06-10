@@ -1,6 +1,6 @@
 ### Repository for sequence processing functions (spf) for UOD, PSE and PPS algorithms
 ### Version-1.05: 06/10/2016
-### Author: Felix Francis (felixfrancier@gmail.com); Under the guidance and financial support of Randall J Wisser (rjw@udel.edu) 
+### Authors: Felix Francis (felixfrancier@gmail.com); Randall J. Wisser (rjw@udel.edu) 
 
 
 ### function to get reverse complement of an input sequence
