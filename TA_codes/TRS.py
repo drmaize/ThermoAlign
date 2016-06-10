@@ -30,18 +30,18 @@ def get_Locus(start_pos, stop_pos, chr_no, refDB_path):
         Locus            =    chr_seq[(start_pos-1):(stop_pos)]
         return Locus.upper()
 
-### mask HapMap polymorphic sites in the extracted locus (testing more efficient way)
-def hapmap_mask(chr_no, start_pos, stop_pos, hapmap_path, refDB_path, write_path, time_stamp, hapmap_mask_condition):
+### mask polymorphic sites in the extracted locus
+def variant_mask(chr_no, start_pos, stop_pos, variant_path, refDB_path, write_path, time_stamp, variant_mask_condition):
     indel_count = 0
     snp_count   = 0
     filename = "chr" + str(chr_no)                                                              
     output_poly_masked = open(write_path + str(time_stamp)+"_"+ str(chr_no) + "_"+ str(start_pos) + "_"+ str((stop_pos-start_pos)+1) + "_PolyMasked.fasta", "w")
-    output_poly_masked.write(str(">"+"TA_"+ str(chr_no) + "_"+ str(start_pos) + "_"+ str((stop_pos-start_pos)+1) + "_"+"HapMapPolyMasked"+'\n'))
+    output_poly_masked.write(str(">"+"TA_"+ str(chr_no) + "_"+ str(start_pos) + "_"+ str((stop_pos-start_pos)+1) + "_"+"VariantMasked"+'\n'))
     Locus = get_Locus(start_pos, stop_pos, chr_no, refDB_path)
     gap_count = Locus.count('N'*100)
     locus_gc = gc_content(Locus)
-    if hapmap_mask_condition == 1:
-        df = pd.read_csv(hapmap_path+filename, sep='\t', header=0) 
+    if variant_mask_condition == 1:
+        df = pd.read_csv(variant_path+filename, sep='\t', header=0) 
         df = df[(df.coordinate >= int(start_pos)) & (df.coordinate <= int(stop_pos))]
         for index, row in df.iterrows():
             if '<INS>' in row['alternate_allele'] or '<DEL>' in row['alternate_allele']:
@@ -87,7 +87,7 @@ if __name__ == '__main__':
     parameters_used = open(out_path +str(time_stamp)+'_run_summary.txt', 'w')
     ### Print parameters used  
     parameters_used.write   (   "##########################################################"+"\n"+
-                                "### TRS Locus selection & HapMap masking parameters"+"\n"+
+                                "### TRS locus selection & variant masking parameters"+"\n"+
                                 "### Start date: " + str(time.strftime("%m/%d/%Y"))+";"+ "\t"+ "Start time: "+ str(time.strftime("%H:%M:%S")) +"\n"+
                                 "##########################################################"+"\n"+
                                 "Chromosome number      =  "+str(chr_no)+"\n")
@@ -100,15 +100,15 @@ if __name__ == '__main__':
         parameters_used.write   (   "Locus start position   =  "+str(start_pos)+"\n"+
                                     "Locus stop position    =  "+str(stop_pos)+"\n")
                                 
-    parameters_used.write   (   "HapMap mask condition  =  "+str(hapmap_mask_condition)+ " (1: Yes; 0: No)" + "\n"+
-                                "HapMap masked output file =  "+str("TA_"+ str(chr_no) + "_"+ str(start_pos) + "_"+ str((stop_pos-start_pos)+1) + "_PolyMasked.fasta")+"\n"+"\n"+
-                                "## Whole genomic assembly and HapMap files input path"+"\n"+
+    parameters_used.write   (   "Variant mask condition  =  "+str(variant_mask_condition)+ " (1: Yes; 0: No)" + "\n"+
+                                "Variant masked output file =  "+str("TA_"+ str(chr_no) + "_"+ str(start_pos) + "_"+ str((stop_pos-start_pos)+1) + "_PolyMasked.fasta")+"\n"+"\n"+
+                                "## Whole genomic assembly and variant files input path"+"\n"+
                                 "Genome assembly file path  =  "+str(refDB_path)+"\n"+
-                                "HapMap file path           =  "+str(hapmap_path)+"\n"+          
+                                "Variant file path           =  "+str(variant_path)+"\n"+          
                                 "##########################################################"+"\n")
 
-    ### Locus extraction and HapMap masking
-    indel_snp_gap_info = hapmap_mask(chr_no, start_pos, stop_pos, hapmap_path, refDB_path, out_path, time_stamp, hapmap_mask_condition) 
+    ### Locus extraction and variant masking
+    indel_snp_gap_info = variant_mask(chr_no, start_pos, stop_pos, variant_path, refDB_path, out_path, time_stamp, variant_mask_condition) 
     indel_count, snp_count, gap_count, locus_gc = indel_snp_gap_info[0], indel_snp_gap_info[1], indel_snp_gap_info[2], indel_snp_gap_info[3]
     
     ############################################################
