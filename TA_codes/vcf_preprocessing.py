@@ -64,6 +64,6 @@ print '\n', "Time to run code = ", total, " seconds", '\n'
     
 ### Change log
 ### v1.03 -> v1.04 vcf to coord preprocessing
-### v1.04 -> v1.05 process any hcf files
+### v1.04 -> v1.05 process any vcf files
 
     
