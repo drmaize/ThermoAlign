@@ -130,3 +130,12 @@ if __name__ == '__main__':
 
     ### Copy parameters file into the timestamp directory
     shutil.copy2('./parameters.py', str('./'+time_stamp + '/parameters.py'))
+
+    
+### Change log
+### v1.02 -> v1.03
+    # Removed output files used during the test phase for review
+### v1.03 -> v1.04
+    # Use parameters from parameters.py file, including generating the locus name for the input file
+### v1.04 -> v1.05
+    # hapmap to variant

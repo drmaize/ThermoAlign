@@ -468,7 +468,9 @@ if __name__ == '__main__':
     # uses updated dependency thal.c code to predict heterodimer_dg
 ### v1.03 -> v1.04
     # Minimum tiling path identification using shortest path in graph approach
-
+    # Use parameters from parameters.py file, including generating the locus name for the input file
+### v1.04 -> v1.05
+    # hapmap to variant
 
     
     
