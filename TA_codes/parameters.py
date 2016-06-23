@@ -5,13 +5,12 @@
 ### path to required files
 refDB_path          =   "../sample_genome/"
 variant_path        =   "../sample_vcf/processed_vcf_files/"
-# multiplx_path       =   "../"
-multiplx_path       =   "/home/ffrancis/softwares/multiplx/"
+multiplx_path       =   "../"
 
 ## target region selection 
-chr_no                  =   3       # fast test
-start_pos               =   3000     # fast test
-stop_pos                =   5000    # fast test
+chr_no                  =   3
+start_pos               =   2000
+stop_pos                =   5000
 no_chrs_in_genome       =   3       # specify the number of chromosomes in the genome used
 variant_mask_condition  =   1       #(1:Yes; 0:No)   
 flanking_primers        =   0       #(1:Yes; 0:No)
@@ -30,14 +29,14 @@ Tris                =   10     #mM
 Mg                  =   1.5    #mM  
 dNTPs               =   0.2    #mM  
 
-## primer features
+### primer features
 self_Tmdiff         =   20
 filter_AT_3prime    =   0       #(1:Yes; 0:No)
 di_si_repeats_threshold =   4
 filter_di_si_repeats=   1       #(1:Yes; 0:No)
-filter_GC_clamp     =   0       #(1:Yes; 0:No)   
+filter_GC_clamp     =   1       #(1:Yes; 0:No)   
             
-## blastn parameters for exact-match(em) search
+### blastn parameters for exact-match(em) search
 em_e_value          =   30000
 em_gapopen          =   2
 em_gapextend        =   2
@@ -48,7 +47,7 @@ em_max_target_seqs  =   2
 em_max_hsps         =   2
 em_num_threads      =   5
 
-## blastn parameters for mis-prime(mp) search
+### blastn parameters for mis-prime(mp) search
 mp_e_value          =   30000
 mp_gapopen          =   2                                                                  
 mp_gapextend        =   2
@@ -82,9 +81,4 @@ maxitemsingroup     =   1000
 ### time_stamp
 ##########################################################
 
-time_stamp_used          =   'TA_2016-06-23T13_34_31_860196'
-time_stamp_used          =   'TA_2016-06-23T13_35_06_418249'
-time_stamp_used          =   'TA_2016-06-23T13_35_24_781626'
-time_stamp_used          =   'TA_2016-06-23T17_32_11_646378'
-time_stamp_used          =   'TA_2016-06-23T17_37_31_145788'
-time_stamp_used          =   'TA_2016-06-23T18_05_40_554911'
+time_stamp_used          =   'TA_2016-06-23T17_30_50_967287'
