@@ -130,5 +130,3 @@ if __name__ == '__main__':
 
     ### Copy parameters file into the timestamp directory
     shutil.copy2('./parameters.py', str('./'+time_stamp + '/parameters.py'))
-
-    
