@@ -11,7 +11,7 @@ multiplx_path       =   "../"
 chr_no                  =   3       # fast test
 start_pos               =   100     # fast test
 stop_pos                =   1000    # fast test
-no_chrs_in_genome       =   5       # specify the number of chromosomes in the genome used
+no_chrs_in_genome       =   3       # specify the number of chromosomes in the genome used
 variant_mask_condition  =   1       #(1:Yes; 0:No)   
 flanking_primers        =   0       #(1:Yes; 0:No)
 flanking_size           =   2000
@@ -29,14 +29,14 @@ Tris                =   10     #mM
 Mg                  =   1.5    #mM  
 dNTPs               =   0.2    #mM  
 
-## primer features
+### primer features
 self_Tmdiff         =   20
 filter_AT_3prime    =   0       #(1:Yes; 0:No)
 di_si_repeats_threshold =   4
 filter_di_si_repeats=   1       #(1:Yes; 0:No)
-filter_GC_clamp     =   0       #(1:Yes; 0:No)   
+filter_GC_clamp     =   1       #(1:Yes; 0:No)   
             
-## blastn parameters for exact-match(em) search
+### blastn parameters for exact-match(em) search
 em_e_value          =   30000
 em_gapopen          =   2
 em_gapextend        =   2
@@ -47,7 +47,7 @@ em_max_target_seqs  =   2
 em_max_hsps         =   2
 em_num_threads      =   5
 
-## blastn parameters for mis-prime(mp) search
+### blastn parameters for mis-prime(mp) search
 mp_e_value          =   30000
 mp_gapopen          =   2                                                                  
 mp_gapextend        =   2

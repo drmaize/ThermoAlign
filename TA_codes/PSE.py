@@ -177,7 +177,7 @@ if __name__ == '__main__':
     fasta_input_file_R    = path + Time_stamp + "_" +'UPD_out2_2.fasta'
           
     ### Locus file name
-    locus       =    path + Time_stamp + "_" + str(chr_no) + "_" + str(start_pos) + "_" + str((stop_pos - start_pos)+1) +"_PolyMasked.fasta"
+    locus       =    path + Time_stamp + "_" + str(chr_no) + "_" + str(start_pos) + "_" + str((stop_pos - start_pos)+1) +"_VariantMasked.fasta"
        
     ### Parameter out put file
     parameters_used = open( path + Time_stamp +'_run_summary.txt', 'a')
