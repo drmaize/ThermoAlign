@@ -637,10 +637,7 @@ if __name__ == '__main__':
 
 ### Change log
 ### v1.02 -> v1.03
-    # Removed output files used during the test phase for review
-### v1.03 -> v1.04
-    # Use parameters from parameters.py file, including generating the locus name for the input file
-    # final_pooled_primer_f_r_coordinate_file.csv has new format for "3'_region_mismatches" column: 2 -/- 3
-### v1.04 -> v1.05
-    # hapmap to variant
+### Use parameters from parameters.py file, including generating the locus name for the input file
+### final_pooled_primer_f_r_coordinate_file.csv has new format for "3'_region_mismatches" column: 2 -/- 3
+
 

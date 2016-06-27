@@ -8,9 +8,9 @@ variant_path        =   "../sample_vcf/processed_vcf_files/"
 multiplx_path       =   "../"
 
 ## target region selection 
-chr_no                  =   3
-start_pos               =   2000
-stop_pos                =   5000
+chr_no                  =   3       # fast test
+start_pos               =   100     # fast test
+stop_pos                =   1000    # fast test
 no_chrs_in_genome       =   3       # specify the number of chromosomes in the genome used
 variant_mask_condition  =   1       #(1:Yes; 0:No)   
 flanking_primers        =   0       #(1:Yes; 0:No)
@@ -77,8 +77,5 @@ grouping_stringency =   "normal"    #(low/normal/high)
 maxgroups           =   1000       
 maxitemsingroup     =   1000
 
-##########################################################
-### time_stamp
-##########################################################
 
 

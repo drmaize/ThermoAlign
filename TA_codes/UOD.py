@@ -74,7 +74,7 @@ def homodimer_Tm(primer_sequence, mv_cation=0,primer_conc=0):
     return ("{0:.2f}".format(round(Tm_homodimer,2)))        
 
 ### FUNCTION TO CHECK IF BOTH THE ENDS OF PRIMERS HAS G/C (if not, they will be filtered) if filter based on A/T end condition is true  
-def check_ATends(sequence, filter_AT_3prime ):  #filter_AT_3prime= 0(do not filter); filter_AT_3prime= 1(filter)
+def check_ATends(sequence, filter_AT_3prime ):  #filter_AT_3prime= 0(do not filter); filter_AT_3prime= 1 (filter)
     if filter_AT_3prime == 1:
         sequence        = sequence.upper()
         sequence        =    sequence[:-1]+sequence[-1].replace("C","G")
@@ -110,7 +110,7 @@ def primer_filter (primer, minTm, maxTm,  GC_range_min,GC_range_max, self_Tmdiff
                     if primer_GC_clamp_filter =="noGC_clamp_filter":            
                     
                         primer_di_single_repeat_filter    =    di_single_nucleo_repeat_filter(primer, filter_di_si_repeats = filter_di_si_repeats, di_si_repeats_threshold = di_si_repeats_threshold)
-                        if primer_di_single_repeat_filter ==0:
+                        if primer_di_single_repeat_filter    ==0:
                     
                             primer_Tm    = float(NN_Tm(seq=primer, compl_seq=complement(primer), primer_conc=primer_conc, Na=Na, K=K, Tris=Tris, Mg=Mg, dNTPs=dNTPs, ion_corr=True))        
                             if primer_Tm >=minTm and primer_Tm <=maxTm:                
@@ -393,7 +393,4 @@ if __name__ == '__main__':
 ### v1.02 -> v1.03
     # Removed output files used during the test phase for review
 ### v1.03 -> v1.04
-    # Use parameters from parameters.py file, including generating the locus name for the input file
-### v1.04 -> v1.05
-    # hapmap to variant
-    
+    #Use parameters from parameters.py file, including generating the locus name for the input file

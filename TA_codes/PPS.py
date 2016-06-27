@@ -440,7 +440,8 @@ if __name__ == '__main__':
     if set2:
         ### print output files for multiplex_group_output for second set and continue with primer_pair_counter
         primer_pair_counter = multiplex_group_output(multiplex_groups_set2_1, 2, primer_pair_counter)
-
+    else:
+        primer_pair_counter = "Nill"
     ############################################################
     # Time to run the code: end timer
     ############################################################
@@ -468,9 +469,7 @@ if __name__ == '__main__':
     # uses updated dependency thal.c code to predict heterodimer_dg
 ### v1.03 -> v1.04
     # Minimum tiling path identification using shortest path in graph approach
-    # Use parameters from parameters.py file, including generating the locus name for the input file
-### v1.04 -> v1.05
-    # hapmap to variant
+
 
     
     
