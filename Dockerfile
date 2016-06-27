@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-MAINTAINER Felix Francis <felixfrancier@gmail.com>
+
 
 # Install all the softwares & dependencies required to run the pipeline
 RUN apt-get update
