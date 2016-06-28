@@ -1,5 +1,5 @@
 ### PSE: Primer Specificity Evaluation (PSE) algorithm; a part of Thermo-Align tool for the design of template specific hybridization and priming oligonucleotides
-### Version-1.05: 06/10/2016
+### Version 1.0.0: 06/28/2016
 ### Authors: Felix Francis (felixfrancier@gmail.com); Randall J. Wisser (rjw@udel.edu) 
 
 ############################################################
@@ -634,10 +634,12 @@ if __name__ == '__main__':
         
     parameters_used.close()
 
+### Version log (SemVer format)
+### 0.1.0: Initial development release
+### 0.1.1: Use parameters from parameters.py file; time stamp based naming of the directory and output files
+### 0.1.2: TA_timestamp_HSE_out3_1.csv has new format for "3'_region_mismatches" column: 2 -/- 3
 
-### Change log
-### v1.02 -> v1.03
-### Use parameters from parameters.py file, including generating the locus name for the input file
-### final_pooled_primer_f_r_coordinate_file.csv has new format for "3'_region_mismatches" column: 2 -/- 3
+
+
 
 

@@ -1,5 +1,5 @@
 ### vcf_conversion: converts a vcf file to ThermoAlign input format
-### Version-1.05: 06/10/2016
+### Version 1.0.0: 06/28/2016
 ### Authors: Felix Francis (felixfrancier@gmail.com); Randall J. Wisser (rjw@udel.edu) 
 
 ### Requirements
@@ -63,10 +63,7 @@ total = ("{0:.2f}".format(round(total,2)))
 print '\n', "Time to run code = ", total, " seconds", '\n'
 
 
-    
-    
-### Change log
-### v1.03 -> v1.04 vcf to coord preprocessing
-### v1.04 -> v1.05 process any vcf files
-
+### Version log (SemVer format)
+### 0.1.0: Initial development release
+### 0.1.1: Generalized to process any vcf files (v4.0 or advanced as per the 1000 genome vcf file format)
     

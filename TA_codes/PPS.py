@@ -1,5 +1,5 @@
 ### Primer Pair Selection module: extracts all possible oligonucleotides from a target region that are unique and expected to stably hybridize template DNA
-### Version-1.05: 06/10/2016
+### Version 1.0.0: 06/28/2016
 ### Authors: Felix Francis (felixfrancier@gmail.com); Randall J. Wisser (rjw@udel.edu) 
 
 
@@ -464,11 +464,10 @@ if __name__ == '__main__':
                         )
     parameters_used.close()
 
-### Change log
-### v1.02 -> v1.03
-    # uses updated dependency thal.c code to predict heterodimer_dg
-### v1.03 -> v1.04
-    # Minimum tiling path identification using shortest path in graph approach
+### Version log (SemVer format)
+### 0.1.0: Initial development release
+### 0.1.1: Uses updated primer3 dependency thal.c code to predict heterodimer_dg
+### 0.1.2: Minimum tiling path identification using shortest path in graph
 
 
     

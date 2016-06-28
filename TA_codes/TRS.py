@@ -1,5 +1,5 @@
 ### Target Region Selection module: selects a targeted sequence in a genome and masks variant sites
-### Version-1.05: 06/10/2016
+### Version 1.0.0: 06/28/2016
 ### Authors: Felix Francis (felixfrancier@gmail.com); Randall J. Wisser (rjw@udel.edu) 
 
 ### Import functions
@@ -131,4 +131,7 @@ if __name__ == '__main__':
     ### Copy parameters file into the timestamp directory
     shutil.copy2('./parameters.py', str('./'+time_stamp + '/parameters.py'))
 
-    
+### Version log (SemVer format)
+### 0.1.0: Initial development release
+### 0.1.1: Use parameters from parameters.py file; time stamp based naming of the directory and output files
+### 0.1.2: Generalize script for any genome and any polymophism vcf file, given in the required format

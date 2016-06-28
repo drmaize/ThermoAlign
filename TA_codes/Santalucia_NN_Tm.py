@@ -1,5 +1,5 @@
 ### Santalucia_NN_Tm; a part of Thermo-Align tool for the design of template specific hybridization and priming oligonucleotides
-### Version-1.05: 06/10/2016
+### Version 1.0.0: 06/28/2016
 ### Authors: Felix Francis (felixfrancier@gmail.com); Randall J. Wisser (rjw@udel.edu)  
 
 ############################################################

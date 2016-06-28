@@ -1,5 +1,6 @@
 FROM ubuntu:latest
 
+MAINTAINER Felix Francis <felixfrancier@gmail.com> 
 
 # Install all the softwares & dependencies required to run the pipeline
 RUN apt-get update
@@ -7,7 +8,7 @@ RUN apt-get install -y wget
 RUN apt-get install -y git
 RUN apt-get install -y python-pip                                                       # v 2.7.11+
 #RUN apt-get install python-dev build-essential 
-RUN pip install --upgrade pip shutilwhich biopython numpy pandas
+RUN pip install --upgrade pip shutilwhich numpy pandas biopython
 RUN pip install Cython                                                                  # v 0.24
 RUN pip install primer3-py                                                              # v 0.5.1
 RUN pip install networkx                                                                # v 1.11

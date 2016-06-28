@@ -1,5 +1,5 @@
 ### UOD: Unique Oligonucleotide Design algorithm; a part of Thermo-Align tool for the design of template specific hybridization and priming oligonucleotides
-### Version-1.05: 06/10/2016
+### Version 1.0.0: 06/28/2016
 ### Authors: Felix Francis (felixfrancier@gmail.com); Randall J. Wisser (rjw@udel.edu) 
 
 ############################################################
@@ -389,8 +389,8 @@ if __name__ == '__main__':
                                 "\n"+"\n")
     parameters_used.close()
 
-### Change log
-### v1.02 -> v1.03
-    # Removed output files used during the test phase for review
-### v1.03 -> v1.04
-    #Use parameters from parameters.py file, including generating the locus name for the input file
+### Version log (SemVer format)
+### 0.1.0: Initial development release
+### 0.1.1: Use parameters from parameters.py file; time stamp based naming of the directory and output files
+### 0.1.2: Removed output files used during the test phase for review
+    
