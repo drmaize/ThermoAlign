@@ -24,5 +24,7 @@ RUN PATH=$PATH:~/opt/bin
 
 # Download TA codes and sample genome, polymorphism vcf files
 RUN git clone https://github.com/drmaize/ThermoAlign.git
-RUN mv -t ./ ThermoAlign/sample_genome/ ThermoAlign/sample_vcf/ ThermoAlign/TA_codes/
+RUN mv ThermoAlign/sample_genome/ ./
+RUN mv ThermoAlign/sample_vcf/ ./
+RUN mv ThermoAlign/TA_codes/ ./
 RUN rm -rf ThermoAlign/
