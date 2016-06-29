@@ -5,6 +5,7 @@ MAINTAINER Felix Francis <felixfrancier@gmail.com>
 # Install all the softwares & dependencies required to run the pipeline
 RUN apt-get update
 RUN apt-get install -y wget
+RUN apt-get install -y vim
 RUN apt-get install -y git
 RUN apt-get install -y python-pip                                                       # v 2.7.11+
 #RUN apt-get install python-dev build-essential 
