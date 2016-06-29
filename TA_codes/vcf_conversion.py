@@ -26,7 +26,7 @@ t0 = time.time()
 ############################################################
 
 
-input_path   =   "./sample_vcf/"
+input_path   =   "../sample_vcf/"
 
 
 def vcf2coords(input_file, input_path):
