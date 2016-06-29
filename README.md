@@ -21,6 +21,11 @@ Requirements for directly running the source code
 * [networkx    1.11](https://networkx.github.io/)
 
 
+Support:
+================================================
+For support using ThermoAlign, please visit the ThermoAlign Google Group.
+
+
 ThermoAlign Docker images:
 ================================================
 Beyond the source code, the following Docker images are made available: 
