@@ -5,3 +5,7 @@ ThermoAlign is a a genome-aware oligonucleotide design algorithm embedded within
 
 Installing Docker:
 ================================================
+Docker installation can be done by visiting the [official Docker installation page](https://docs.docker.com/engine/installation/) and following the instructions tailored for your operating system.
+
+
+
