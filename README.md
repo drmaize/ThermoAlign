@@ -30,31 +30,24 @@ Beyond the source code, the following Docker images are made available:
 
 These docker images help automate deployment of ThermoAlign inside docker containers. It is an efficient way to port ThermoAlign across systems and operating systems.
 
-You may also directly use the [ThermoAlign docker reference file](https://github.com/drmaize/ThermoAlign/blob/master/Dockerfile) to create your own ThermoAlign docker images.
-    
-    docker build https://github.com/drmaize/ThermoAlign.git
 
 Installing Docker:
 ================================================
 Docker installation can be done by visiting the [official Docker installation page](https://docs.docker.com/engine/installation/) and following the instructions tailored for your operating system.
 
 
+Build your own ThermoAlign docker image:
+================================================
+
+You may directly use the [ThermoAlign docker reference file](https://github.com/drmaize/ThermoAlign/blob/master/Dockerfile) to create your own ThermoAlign docker images.
+    
+    docker build https://github.com/drmaize/ThermoAlign.git
+
+    
+END OF README    
 
 
-
-*
-
-
-
-
-
-*
-
-
-
-
-
-
+    
 
 
 
