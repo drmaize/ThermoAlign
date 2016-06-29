@@ -43,21 +43,17 @@ You may directly use the [ThermoAlign docker reference file](https://github.com/
     
     docker build https://github.com/drmaize/ThermoAlign.git
 
-    
+   
+
+
+
+
+
+
+
+
+
+
+   
 END OF README    
 
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-*
