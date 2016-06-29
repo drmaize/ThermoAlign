@@ -9,8 +9,8 @@ multiplx_path       =   "../"
 
 ## target region selection 
 chr_no                  =   3       # fast test
-start_pos               =   100     # fast test
-stop_pos                =   1000    # fast test
+start_pos               =   2000     # fast test
+stop_pos                =   5000    # fast test
 no_chrs_in_genome       =   3       # specify the number of chromosomes in the genome used
 variant_mask_condition  =   1       #(1:Yes; 0:No)   
 flanking_primers        =   0       #(1:Yes; 0:No)
@@ -55,7 +55,7 @@ mp_reward           =   1
 mp_penalty          =   -1
 mp_num_threads      =   5
 mp_perc_identity    =   70
-mp_max_target_seqs  =   5 ## ***** set to the total number of input fasta sequences *****
+mp_max_target_seqs  =   3 ## ***** set to the total number of input fasta sequences *****
 mp_max_hsps         =   20
 
 ### primer pair picking parameters                               
