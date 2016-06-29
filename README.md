@@ -55,5 +55,5 @@ For support using ThermoAlign, please visit the ThermoAlign Google Group.
 
 
    
-END OF README    
+                ##### END OF README #####    
 
