@@ -9,7 +9,7 @@ multiplx_path       =   "../"
 
 ## target region selection 
 chr_no                  =   3       # fast test
-start_pos               =   2000     # fast test
+start_pos               =   3000     # fast test
 stop_pos                =   5000    # fast test
 no_chrs_in_genome       =   3       # specify the number of chromosomes in the genome used
 variant_mask_condition  =   1       #(1:Yes; 0:No)   
