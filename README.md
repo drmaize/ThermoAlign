@@ -7,6 +7,14 @@ Running ThermoAlign:
 ================================================
 ThermoAlign is released under a GNU GPLv3 open source license. The [source code](https://github.com/drmaize/ThermoAlign/tree/master/TA_codes) can be found [here.](https://github.com/drmaize/ThermoAlign/tree/master/TA_codes)
 
+The required parameters need to be used in the parameters.py file.
+
+The shell script pipeline.sh would run all the required ThermoAlign components.
+
+Alternatively, individual components of ThermoAlign may also be separately run in the following order:
+1) TRS.py; 2) UOD.py 3) PSE.py 4) PPS.py
+
+
 
 Requirements for directly running the source code
 ================================================
