@@ -10,15 +10,15 @@ ThermoAlign is released under a GNU GPLv3 open source license. The [source code]
 
 Requirements for directly running the source code
 ================================================
-Linux/Unix
-Python  2.7
-NumPy   1.9.2
-pandas  0.18.1
-Cython  0.24
-primer3-py  0.5.1
-BLAST   2.2.31+
-MultiPLX    2.0
-networkx    1.11
+* Linux/Unix
+* Python  2.7
+* NumPy   1.9.2
+* pandas  0.18.1
+* Cython  0.24
+* primer3-py  0.5.1
+* BLAST   2.2.31+
+* MultiPLX    2.0
+* networkx    1.11
 
 
 ThermoAlign Docker images:
