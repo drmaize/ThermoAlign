@@ -36,16 +36,6 @@ Beyond the source code, the following Docker images are made available:
 * (ii) TA_1.0.0_d is a general distributable version which requires user supplied files
 * (iii) TA_1.0.0_Zm3 is a maize ready version containing all components required for running ThermoAlign as described in this study
 
-To run a docker image as a container that can be accessed via bash:
-
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash
-                            OR
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_d /bin/bash
-                            OR
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_Zm3 /bin/bash
-
-This will generate a new ThermoAlign container everytime its used.
- 
     
 These docker images help automate deployment of ThermoAlign inside docker containers. It is an efficient way to port ThermoAlign across systems and operating systems.
 
@@ -55,6 +45,18 @@ Installing Docker:
 Docker installation can be done by visiting the [official Docker installation page](https://docs.docker.com/engine/installation/) and following the instructions tailored for your operating system.
 
 Basic [docker commands](https://goo.gl/TfU9AY) to run software containers such as ThermoAlign can be found [here](https://goo.gl/TfU9AY) or on [docs.docker.com](https://docs.docker.com/).
+
+
+To run a docker image as a container that can be accessed via bash:
+
+    docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash
+                            OR
+    docker run -t -i drmaize/thermoalign:TA_1.0.0_d /bin/bash
+                            OR
+    docker run -t -i drmaize/thermoalign:TA_1.0.0_Zm3 /bin/bash
+
+This will generate a new ThermoAlign container everytime its used.
+
 
 Build your own ThermoAlign docker image:
 ================================================
