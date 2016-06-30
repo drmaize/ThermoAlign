@@ -39,7 +39,9 @@ Beyond the source code, the following Docker images are made available:
 To run a docker image as a container that can be accessed by using bash:
 
     docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash
+                            OR
     docker run -t -i drmaize/thermoalign:TA_1.0.0_d /bin/bash
+                            OR
     docker run -t -i drmaize/thermoalign:TA_1.0.0_Zm3 /bin/bash
 
 These docker images help automate deployment of ThermoAlign inside docker containers. It is an efficient way to port ThermoAlign across systems and operating systems.
