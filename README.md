@@ -36,6 +36,13 @@ Beyond the source code, the following Docker images are made available:
 * (ii) TA_1.0.0_d is a general distributable version which requires user supplied files
 * (iii) TA_1.0.0_Zm3 is a maize ready version containing all components required for running ThermoAlign as described in this study
 
+For example, to run a docker image as a container that can be accessed by using bash:
+
+    docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash
+
+
+
+
 These docker images help automate deployment of ThermoAlign inside docker containers. It is an efficient way to port ThermoAlign across systems and operating systems.
 
 
