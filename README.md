@@ -43,6 +43,7 @@ Installing Docker:
 ================================================
 Docker installation can be done by visiting the [official Docker installation page](https://docs.docker.com/engine/installation/) and following the instructions tailored for your operating system.
 
+Basic docker commands to run software containers such as ThermoAlign can be found [here](https://goo.gl/TfU9AY) or on the [docker site](https://docs.docker.com/).
 
 Build your own ThermoAlign docker image:
 ================================================
