@@ -34,7 +34,7 @@ ThermoAlign Docker images:
 Beyond the source code, the following Docker images are made available: 
 * (i) TA_1.0.0_s is a sample run version containing a small set of sample files that can be used to test ThermoAlign
 * (ii) TA_1.0.0_d is a general distributable version which requires user supplied files
-* (iii) TA_1.0.0_Zm3 is a maize ready version containing all components required for running ThermoAlign as described in this study.
+* (iii) TA_1.0.0_Zm3 is a maize ready version containing all components required for running ThermoAlign as described in this study
 
 These docker images help automate deployment of ThermoAlign inside docker containers. It is an efficient way to port ThermoAlign across systems and operating systems.
 
