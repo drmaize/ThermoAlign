@@ -56,7 +56,7 @@ To run a docker image as a container that can be accessed via bash:
     docker run -t -i drmaize/thermoalign:TA_1.0.0_Zm3 /bin/bash
 
 This will pull the latest ThermoAlign images from docker hub and generate a new ThermoAlign container in your local machine. 
-If the particular image is already present in your local docker environment, this would just run a container based off that image.
+If the particular image is already present in your local system, this would simply run a container based on that image.
 
 
     cd TA_codes/                    # move to TA_codes directory
