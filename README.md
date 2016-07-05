@@ -67,7 +67,7 @@ If the particular image is already present in your local system, this would simp
 
 
 
-Edit the pipeline.sh file to include necessary PBS options for torque submissions on a cluster.
+If required, users may edit the pipeline.sh file to include necessary PBS options for torque submissions on a cluster.
 
 
 
