@@ -55,7 +55,21 @@ To run a docker image as a container that can be accessed via bash:
                             OR
     docker run -t -i drmaize/thermoalign:TA_1.0.0_Zm3 /bin/bash
 
-This will generate a new ThermoAlign container everytime its used.
+This will pull the latest ThermoAlign images from docker hub and generate a new ThermoAlign container in your local machine. 
+If the particular image is already present in your local docker environment, this would just run a container based off that image.
+
+
+    cd TA_codes/                    # move to TA_codes directory
+    chmod +x pipeline.sh            # make the ./pipeline.sh file execuatable
+    python vcf_conversion.py        # one time preprocessing of vcf files in "../sample_vcf" directory
+    vim parameters.py               # to input the desired parameters
+
+
+
+
+Edit the pipeline.sh file to include necessary PBS options for torque submissions on a cluster.
+
+
 
 
 Build your own ThermoAlign docker image:
