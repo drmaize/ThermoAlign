@@ -77,7 +77,6 @@ Build your own ThermoAlign docker image:
 
 You may directly use the [ThermoAlign docker reference file](https://github.com/drmaize/ThermoAlign/blob/master/Dockerfile) to create your own ThermoAlign docker images.
     
-    docker build https://github.com/drmaize/ThermoAlign.git
 
     
 Support:
