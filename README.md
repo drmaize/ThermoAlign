@@ -85,9 +85,9 @@ Format for external whole genome and variant files:
 
 ## Input chromosme
 
-The chromosome files should be named as<br/><br/><br/><br/>:   chr1.fasta, chr2.fasta etc
+The chromosome files should be named as <br/>:   chr1.fasta, chr2.fasta etc
 
-The fasta header should be of the following format  <br/>:   >chromosome:assembly_ver:chr#:start_pos:end_pos:#sequences
+The fasta header should be of the following format<br/>:   >chromosome:assembly_ver:chr#:start_pos:end_pos:#sequences
 
 Example<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>:   >chromosome:AGPv3:13:1:7261561:1
 
