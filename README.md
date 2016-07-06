@@ -50,13 +50,18 @@ Basic [docker commands](https://goo.gl/TfU9AY) to run software containers such a
 To run a docker image as a container that can be accessed via bash:
 
     docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash
+    
                             OR
+                            
     docker run -t -i drmaize/thermoalign:TA_1.0.0_d /bin/bash
+    
                             OR
+                            
     docker run -t -i drmaize/thermoalign:TA_1.0.0_Zm3 /bin/bash
 
 This will pull the latest ThermoAlign images from docker hub and generate a new ThermoAlign container in your local machine. 
-If the particular image is already present in your local system, this would simply run a container based on that image.
+If the particular image is already present in your local system, this would simply run a container based on that image. 
+These docker images include a vim text editor so that users may modify the ThermoAlign parameters.
 
 
     cd TA_codes/                    # move to TA_codes directory
@@ -65,18 +70,15 @@ If the particular image is already present in your local system, this would simp
     vim parameters.py               # to input the desired parameters
 
 
-
-
-If required, users may edit the pipeline.sh file to include necessary PBS options for torque submissions on a cluster.
-
-
-
-
-Build your own ThermoAlign docker image:
-================================================
-
-You may directly use the [ThermoAlign docker reference file](https://github.com/drmaize/ThermoAlign/blob/master/Dockerfile) to create your own ThermoAlign docker images.
+These docker containers may be run on a cluster in interactive mode:
     
+    qsub -I -V -N intrctv -l nodes=biomix17:ppn=5
+    
+and then,
+    
+    docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash
+
+
 
     
 Support:
