@@ -84,12 +84,17 @@ Format for external whole genome and variant files:
 ================================================
 
 *   Input chromosme
+
 The chromosome files should be named as             :   chr1.fasta, chr2.fasta etc
+
 The fasta header should be of the following format  :   >chromosome:assembly_ver:chr#:start_pos:end_pos:#sequences
+
                                             Example :   >chromosome:AGPv3:13:1:7261561:1
 
 *   Input variant vcf file 
+
 The variant vcf files should be named as            :   chr1.vcf, chr2.vcf etc
+
 vcf format (1000 genomes project format)            :   A vcf file (v4.0 or v4.1) based on the same coordinate system of the reference genome sequence may be optionally used for polymorphism-aware primer design
 
 
