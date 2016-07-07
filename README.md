@@ -77,8 +77,16 @@ These docker containers may be run on a cluster in interactive mode:
 and then,
     
     docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash
-
     
+
+Please be aware that the available memory for running these docker containers should be greater than the combined size of the whole genome and variant files.
+
+
+For optimum performance with larger and highly repetitive genomes, it is recommended that the source codes be run natively, with the required dependencies installed on your local machine/cluster. 
+
+
+The provided docker containers work best for smaller genomes, with user defined regions of < 10 kb sizes, at narrow primer size, Tm and GC ranges.
+  
    
 Format for external whole genome and variant files:
 ================================================
@@ -100,7 +108,7 @@ vcf format (1000 genomes project format)            :   A vcf file (v4.0 or v4.1
 
 
     
-_Support_ :
+Support:
 ================================================
 For support using ThermoAlign, please visit the ThermoAlign Google Group.
 
