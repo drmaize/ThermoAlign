@@ -91,7 +91,7 @@ The provided docker containers work best for smaller genomes, with user defined 
 Format for external whole genome and variant files:
 ================================================
 
-### _Input chromosme_
+### _Input chromosome_
 
 The chromosome files should be named as             :   chr1.fasta, chr2.fasta etc
 
