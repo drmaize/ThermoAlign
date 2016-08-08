@@ -172,19 +172,19 @@ if __name__ == '__main__':
     ############################################################
     #### OUTPUT FILES
     ############################################################
-    FRprimer        = path + Time_stamp + "_" +'UPD_out1_1.fasta'
+    FRprimer        = path + Time_stamp + "_" +'UOD_out1_1.fasta'
     output1         = open (FRprimer, 'w')
-    primerFR_list_Tm_len_filtered_with_info = path + Time_stamp + "_" +'UPD_out1_2.txt'   
+    primerFR_list_Tm_len_filtered_with_info = path + Time_stamp + "_" +'UOD_out1_2.txt'   
     output1_1       = open( primerFR_list_Tm_len_filtered_with_info, 'w')
-    primerF_list_Tm_len_exact_match_filtered = path + Time_stamp + "_" +'UPD_out2_1.fasta'     
+    primerF_list_Tm_len_exact_match_filtered = path + Time_stamp + "_" +'UOD_out2_1.fasta'     
     output2_1       = open(primerF_list_Tm_len_exact_match_filtered, 'w')
-    primerR_list_Tm_len_exact_match_filtered =  path + Time_stamp + "_" +'UPD_out2_2.fasta'
+    primerR_list_Tm_len_exact_match_filtered =  path + Time_stamp + "_" +'UOD_out2_2.fasta'
     output2_2       = open(primerR_list_Tm_len_exact_match_filtered, 'w')
-    primerF_list_Tm_len_exact_match_filtered_withTmCoord =  path + Time_stamp + "_" +'UPD_out3_1.fasta'     # only for reference
+    primerF_list_Tm_len_exact_match_filtered_withTmCoord =  path + Time_stamp + "_" +'UOD_out3_1.fasta'     # only for reference
     output3_1       = open( primerF_list_Tm_len_exact_match_filtered_withTmCoord, 'w')                      # only for reference
-    primerR_list_Tm_len_exact_match_filtered_withTmCoord =  path + Time_stamp + "_" +'UPD_out3_2.fasta'     # only for reference
+    primerR_list_Tm_len_exact_match_filtered_withTmCoord =  path + Time_stamp + "_" +'UOD_out3_2.fasta'     # only for reference
     output3_2       = open(primerR_list_Tm_len_exact_match_filtered_withTmCoord, 'w')                       # only for reference
-    pooled_f_r_primer =   path + Time_stamp + "_" +'UPD_out4_1.fasta'  
+    pooled_f_r_primer =   path + Time_stamp + "_" +'UOD_out4_1.fasta'  
     output4         = open( pooled_f_r_primer, 'w')
     
     parameters_used = open( path + Time_stamp +'_run_summary.txt', 'a')
@@ -392,5 +392,5 @@ if __name__ == '__main__':
 ### Version log (SemVer format)
 ### 0.1.0: Initial development release
 ### 0.1.1: Use parameters from parameters.py file; time stamp based naming of the directory and output files
-### 0.1.2: Removed output files used during the test phase for review
+### 0.1.2: Removed output files used during the test phase
     

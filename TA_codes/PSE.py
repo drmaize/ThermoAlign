@@ -173,8 +173,8 @@ if __name__ == '__main__':
         stop_pos    = stop_pos + flanking_size
 
     ### input files
-    fasta_input_file_F    = path + Time_stamp + "_" +'UPD_out2_1.fasta'  
-    fasta_input_file_R    = path + Time_stamp + "_" +'UPD_out2_2.fasta'
+    fasta_input_file_F    = path + Time_stamp + "_" +'UOD_out2_1.fasta'  
+    fasta_input_file_R    = path + Time_stamp + "_" +'UOD_out2_2.fasta'
           
     ### Locus file name
     locus       =    path + Time_stamp + "_" + str(chr_no) + "_" + str(start_pos) + "_" + str((stop_pos - start_pos)+1) +"_VariantMasked.fasta"
@@ -573,7 +573,7 @@ if __name__ == '__main__':
     ############################################################
 
     ### Get exact matches for the primers
-    fasta_input_file_FR    =    path + Time_stamp + "_" +'UPD_out4_1.fasta' 
+    fasta_input_file_FR    =    path + Time_stamp + "_" +'UOD_out4_1.fasta' 
     ### Use the smallest value in the primer size range as the word size
     word_size            =    min_pooled_primer_len
     os.chdir(query_path)
