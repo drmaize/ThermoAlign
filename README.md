@@ -69,7 +69,18 @@ These docker images include a vim text editor so that users may modify the Therm
     python vcf_conversion.py        # one time preprocessing of vcf files in "../sample_vcf" directory
     vim parameters.py               # to input the desired parameters
 
+    
+    
+After exiting from a container, the output files may be copied from the container to host.
 
+    docker cp <containerId>:/file/path/within/container /host/path/target
+    
+    example:
+    
+    docker cp 024894d25e19:/TA_codes/TA_2016-08-08T15_23_29_531468/ ./
+    
+
+    
 These docker containers may be run on a cluster in interactive mode:
     
     qsub -I -V -N intrctv -l nodes=biomix17:ppn=5
@@ -91,7 +102,7 @@ The provided docker containers work best for smaller genomes, with user defined 
 Format for external whole genome and variant files:
 ================================================
 
-### _Input chromosome_
+### _Input chromosme_
 
 The chromosome files should be named as             :   chr1.fasta, chr2.fasta etc
 
@@ -108,9 +119,7 @@ vcf format (1000 genomes project format)            :   A vcf file (v4.0 or v4.1
 
 
     
-Support:
-================================================
-For support using ThermoAlign, please visit the ThermoAlign Google Group.
+
 
 
 
