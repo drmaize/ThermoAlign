@@ -93,7 +93,7 @@ and then,
 Please be aware that the available memory for running these docker containers should be greater than the combined size of the whole genome and variant files.
 
 
-For optimum performance with larger and highly repetitive genomes, it is recommended that the source codes be run natively, with the required dependencies installed on your local machine/cluster. 
+For optimum performance with larger and highly repetitive genomes such as the maize genome, it is recommended that the source codes be run natively, with the required dependencies installed on your local machine/cluster. 
 
 
 The provided docker containers work best for smaller genomes, with user defined regions of < 10 kb sizes, at narrow primer size, Tm and GC ranges.
