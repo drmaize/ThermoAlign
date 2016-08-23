@@ -93,7 +93,7 @@ def check_GC_clamp(sequence, filter_GC_clamp ):
             return "GC_clamp_filter"
         else:
             return "noGC_clamp_filter"
-    elif filter_AT_3prime== 0:
+    elif filter_GC_clamp== 0:
         return "noGC_clamp_filter"
 
 ### Chopped primer filter function
