@@ -39,6 +39,7 @@ Beyond the source code, the following Docker images are made available:
     
 These docker images help automate deployment of ThermoAlign inside docker containers. It is an efficient way to port ThermoAlign across systems and operating systems.
 
+For optimum performance with large and highly repetitive genomes such as the maize genome, it is recommended that the source codes be run natively, with the required dependencies installed on your local machine/cluster. 
 
 Installing Docker:
 ================================================
@@ -49,15 +50,15 @@ Basic [docker commands](https://goo.gl/TfU9AY) to run software containers such a
 
 To run a docker image as a container that can be accessed via bash:
 
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash
+    docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash           (container with a sample genome and sample polymorphism file, for quick testing of ThermoAlign)
     
                             OR
                             
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_d /bin/bash
+    docker run -t -i drmaize/thermoalign:TA_1.0.0_d /bin/bash           (a container without any reference genome or polymorphism file)
     
                             OR
                             
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_Zm3 /bin/bash
+    docker run -t -i drmaize/thermoalign:TA_1.0.0_Zm3 /bin/bash         (a maize ready version; for large genomes like maize its preferred that )
 
 This will pull the latest ThermoAlign images from docker hub and generate a new ThermoAlign container in your local machine. 
 If the particular image is already present in your local system, this would simply run a container based on that image. 
@@ -90,9 +91,6 @@ and then,
     
 
 Please be aware that the available memory for running these docker containers should be greater than the combined size of the whole genome and variant files.
-
-
-For optimum performance with larger and highly repetitive genomes such as the maize genome, it is recommended that the source codes be run natively, with the required dependencies installed on your local machine/cluster. 
 
 
 The provided docker containers work best for smaller genomes, with user defined regions of < 10 kb sizes, at narrow primer size, Tm and GC ranges.
