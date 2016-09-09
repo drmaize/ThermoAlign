@@ -65,10 +65,9 @@ These docker images include a vim text editor so that users may modify the Therm
 
 
     cd TA_codes/                    # move to TA_codes directory
-    chmod +x pipeline.sh            # make the ./pipeline.sh file execuatable
     python vcf_conversion.py        # one time preprocessing of vcf files in "../sample_vcf" directory
     vim parameters.py               # to input the desired parameters
-
+    ./pipeline.sh                   # run TA scripts
     
     
 After exiting from a container, the output files may be copied from the container to host.
