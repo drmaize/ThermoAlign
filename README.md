@@ -39,7 +39,7 @@ Beyond the source code, the following Docker images are made available:
     
 These docker images help automate deployment of ThermoAlign inside docker containers. It is an efficient way to port ThermoAlign across systems and operating systems.
 
-For optimum performance with large and highly repetitive genomes such as the maize genome, it is recommended that the source codes be run natively, with the required dependencies installed on your local machine/cluster. 
+For optimum performance with large and highly repetitive genomes such as the maize genome, it is highly recommended that the source codes be run natively, with the required dependencies installed on your local machine/cluster. 
 
 Installing Docker:
 ================================================
