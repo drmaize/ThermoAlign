@@ -126,11 +126,13 @@ TA_2016-09-13T09_05_00_545957_run_summary.txt                       :   An outpu
 TA_2016-09-13T09_05_00_545957_3_33000_2001_VariantMasked.fasta      :   Variant masked locus sequence in fasta format
 
 * The UOD module:
-TA_2016-09-13T09_05_00_545957_UOD_out1_1.fasta                      :   All possible primers (+&-strands) for the given UOD paramters, in fasta format.
-TA_2016-09-13T09_05_00_545957_UOD_out1_2.txt                        :   All possible primers (+&-strands) for the given UOD paramters, in txt format. This includes the occurence of each primer in the target locus.
-
-
-
+TA_2016-09-13T09_05_00_545957_UOD_out1_1.fasta                      :   All possible primers (+ & -strands) for the given UOD paramters (.fasta format).
+TA_2016-09-13T09_05_00_545957_UOD_out1_2.txt                        :   All possible primers (+ & -strands) for the given UOD paramters (.txt format). This includes the occurence of each primer in the target locus.
+TA_2016-09-13T09_05_00_545957_UOD_out2_1.fasta                      :   .fasta file of + strand primers
+TA_2016-09-13T09_05_00_545957_UOD_out2_2.fasta                      :   .fasta file of - strand primers
+TA_2016-09-13T09_05_00_545957_UOD_out3_1.fasta                      :   .fasta file of + strand primers, with location, primer length and Tm information
+TA_2016-09-13T09_05_00_545957_UOD_out3_2.fasta                      :   .fasta file of - strand primers, with location, primer length and Tm information
+TA_2016-09-13T09_05_00_545957_UOD_out4_1.fasta                      :   .fasta file of + & - strand primers
 
 
    
