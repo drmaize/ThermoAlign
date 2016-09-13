@@ -255,7 +255,7 @@ if __name__ == '__main__':
 
     ### input_files
     path        =   Time_stamp + "/"
-    input_file  = path + Time_stamp + "_" + 'HSE_out3_1.csv'
+    input_file  = path + Time_stamp + "_" + 'PSE_out3_1.csv'
 
     ### Locus file name
     locus_len   =   (stop_pos - start_pos)+1

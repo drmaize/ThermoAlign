@@ -361,7 +361,7 @@ if __name__ == '__main__':
     ### write to output file
     output_headers = ["Primer","qstart","qend","sstart","send", "Query_seq","Match_seq","match_direction","3prime_overhang","5prime_overhang","3&5_prime_match_extend","PrimerTm","MatchTm","PrimerTm-MatchTm","First3Prime_mismatch","Primer_NN_Tm","Local_alignment_Tm", "Gap_adjusted_end_filling_Tm"]
     ### write selected columns of the df into a csv file
-    df.to_csv(query_path + path + Time_stamp + "_" + 'HSE_out1_1.csv', columns = output_headers)
+    df.to_csv(query_path + path + Time_stamp + "_" + 'PSE_out1_1.csv', columns = output_headers)
 
     ###
     import primer3
@@ -416,7 +416,7 @@ if __name__ == '__main__':
                     "Max_target_seqs            =   "+str(mp_max_target_seqs)+"\n"+
                     "Max_hsps                   =   "+str(mp_max_hsps)+"\n"+
                     "Number_threads             =   "+str(mp_num_threads)+"\n"+"\n"+
-                    "## HSE parameters"+"\n"+
+                    "## PSE parameters"+"\n"+
                     "3_prime_region             =   "+str(three_prime_region)+"\n"+
                     "Misprime_Tm_percentile     =   "+str(misprime_Tm_percentile_value )+"\n"+
                     "##########################################################"+"\n"
@@ -542,7 +542,7 @@ if __name__ == '__main__':
 
     ### write to output file
     output_headers = ["Primer","qstart","qend","sstart","send","Query_seq","Match_seq","match_direction","3prime_overhang","5prime_overhang","3&5_prime_match_extend","PrimerTm","MatchTm","PrimerTm-MatchTm","First3Prime_mismatch","Primer_NN_Tm","Local_alignment_Tm", "Gap_adjusted_end_filling_Tm"]
-    df.to_csv(query_path + path + Time_stamp + "_" + 'HSE_out2_1.csv', columns = output_headers)
+    df.to_csv(query_path + path + Time_stamp + "_" + 'PSE_out2_1.csv', columns = output_headers)
 
     ###
     import primer3                                                
@@ -586,7 +586,7 @@ if __name__ == '__main__':
     exact_match_output_pooled_primers, error = p5.communicate()
 
     ### final pooled oligo coordinate output file
-    f5 = open(query_path + path + Time_stamp + "_" + 'HSE_out3_1.csv','w')
+    f5 = open(query_path + path + Time_stamp + "_" + 'PSE_out3_1.csv','w')
     f5.write("Primer"+','+"Loci_start"+','+"Loci_stop"+','+"Genome_start"+','+"Genome_stop"+','+"Strand"+','+"Primer_Tm"+','+"Max_misprime_Tm"+','+"Tm_difference"+','+'Misprime_Tm_'+str(misprime_Tm_percentile_value)+'th_percentile'+','+"Primer_GC"+','+"Continuous_GC"+','+"3'_region_mismatches"+','+"Hairpin_Tm"+','+"Homodimer_Tm"+'\n')                            ### changed header name to Max_misprime_Tm
 
     for exact_match_pooled_output_line in exact_match_output_pooled_primers.split('\n')[:-1]:
@@ -637,7 +637,7 @@ if __name__ == '__main__':
 ### Version log (SemVer format)
 ### 0.1.0: Initial development release
 ### 0.1.1: Use parameters from parameters.py file; time stamp based naming of the directory and output files
-### 0.1.2: TA_timestamp_HSE_out3_1.csv has new format for "3'_region_mismatches" column: 2 -/- 3
+### 0.1.2: TA_timestamp_PSE_out3_1.csv has new format for "3'_region_mismatches" column: 2 -/- 3
 
 
 
