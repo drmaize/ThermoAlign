@@ -121,27 +121,55 @@ All output files will be saved in a directory named based on the timestamp of TA
 
 Each output file name will start with the same timestamp. 
 
+
 ###  _The TRS module:_
 
 TA_2016-09-13T09_05_00_545957_run_summary.txt                       :   An output file with detailed summary statistics from the run
 
 TA_2016-09-13T09_05_00_545957_3_33000_2001_VariantMasked.fasta      :   Variant masked locus sequence in fasta format
 
+
 ###  _The UOD module:_
 
-TA_2016-09-13T09_05_00_545957_UOD_out1_1.fasta                      :   All possible primers (+ & -strands) for the given UOD paramters (.fasta format).
+TA_2016-09-13T09_05_00_545957_UOD_out1_1.fasta                      :   All possible primers (+ & -strands) for the given UOD paramters (.fasta format)
 
-TA_2016-09-13T09_05_00_545957_UOD_out1_2.txt                        :   All possible primers (+ & -strands) for the given UOD paramters (.txt format). This includes the occurence of each primer in the target locus.
+TA_2016-09-13T09_05_00_545957_UOD_out1_2.txt                        :   All possible primers (+ & -strands) for the given UOD paramters (.txt format). This includes the occurence of each primer in the target locus
 
 TA_2016-09-13T09_05_00_545957_UOD_out2_1.fasta                      :   .fasta file of + strand primers
 
 TA_2016-09-13T09_05_00_545957_UOD_out2_2.fasta                      :   .fasta file of - strand primers
 
-TA_2016-09-13T09_05_00_545957_UOD_out3_1.fasta                      :   .fasta file of + strand primers, with location, primer length and Tm information
+TA_2016-09-13T09_05_00_545957_UOD_out3_1.fasta                      :   .fasta file of + strand primers, with primer location, length and Tm information
 
-TA_2016-09-13T09_05_00_545957_UOD_out3_2.fasta                      :   .fasta file of - strand primers, with location, primer length and Tm information
+TA_2016-09-13T09_05_00_545957_UOD_out3_2.fasta                      :   .fasta file of - strand primers, with primer location, length and Tm information
 
 TA_2016-09-13T09_05_00_545957_UOD_out4_1.fasta                      :   .fasta file of + & - strand primers
+
+
+###  _The PSE module:_
+
+TA_2016-09-13T09_05_00_545957_PSE_out1_1.csv                        : .csv file with all possible thermoalignment information for + strand primers
+
+TA_2016-09-13T09_05_00_545957_PSE_out2_1.csv                        : .csv file with all possible thermoalignment information for - strand primers
+
+TA_2016-09-13T09_05_00_545957_PSE_out3_1.csv                        : .csv file with the Max_misprime_Tm and primer feature information for + and - primers
+
+
+###  _The PPS module:_
+
+TA_2016-09-13T09_05_00_545957_primer_pairs_info.txt                 : A .txt file containing all possible primer pairs for the user defined parameters and their relevant information
+
+TA_2016-09-13T09_05_00_545957_primer_pairs_order.txt                : Primer names, sequences and their Tm for ordering
+
+TA_2016-09-13T09_05_00_545957_multiplx_input_set1_1.txt, TA_2016-09-13T09_05_00_545957_multiplx_input_set2_1.txt: 
+contains the non-overlapping primer pair combinations from minimal tiling paths. These are used for checking multiplex compatibility
+
+TA_2016-09-13T09_05_00_545957_multiplex_groups_set1_1.txt, TA_2016-09-13T09_05_00_545957_multiplex_groups_set2_1.txt: .txt file listing names of multiplex compatible groups
+
+
+TA_2016-09-13T09_05_00_545957_bed_separate_tracks_selected_oligos.bed: .bed formatted files of the primers for further analysis and visualization.
+
+TA_2016-09-13T09_05_00_545957_multiplx_pooled_output.txt            : 
 
 
 
