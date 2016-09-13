@@ -115,8 +115,11 @@ The variant vcf files should be named as            :   chr1.vcf, chr2.vcf etc
 vcf format (1000 genomes project format)            :   A vcf file (v4.0 or v4.1) based on the same coordinate system of the reference genome sequence may be optionally used for polymorphism-aware primer design
 
 
-    
+Output files:
+================================================
+All output files will be saved in a directory named based on the timestamp of TA_year-month-date-time format (for example :TA_2016-09-13T09_05_00_545957). 
 
+Each output file name will start with the same timestamp.
 
 
 
