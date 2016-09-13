@@ -119,9 +119,15 @@ Output files:
 ================================================
 All output files will be saved in a directory named based on the timestamp of TA_year-month-date-time format (for example :TA_2016-09-13T09_05_00_545957). 
 
-Each output file name will start with the same timestamp.
+Each output file name will start with the same timestamp. 
 
+* The TRS module:
+TA_2016-09-13T09_05_00_545957_run_summary.txt                       :   An output file with detailed summary statistics from the run
+TA_2016-09-13T09_05_00_545957_3_33000_2001_VariantMasked.fasta      :   Variant masked locus sequence in fasta format
 
+* The UOD module:
+TA_2016-09-13T09_05_00_545957_UOD_out1_1.fasta                      :   All possible primers (+&-strands) for the given UOD paramters, in fasta format.
+TA_2016-09-13T09_05_00_545957_UOD_out1_2.txt                        :   All possible primers (+&-strands) for the given UOD paramters, in txt format. This includes the occurence of each primer in the target locus.
 
 
 
