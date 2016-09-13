@@ -76,7 +76,7 @@ These docker images include a vim text editor so that users may modify the Therm
     
     vim parameters.py               # to modify any primer design parameters
     
-    ./pipeline.sh                   # run ThermoAlign scripts
+    ./pipeline.sh                   # run ThermoAlign scripts to design the minimal tiling path of template specific and multiplex compatible sets of primers
     
     
 After exiting from a container, the output files may be copied from the container to host.
