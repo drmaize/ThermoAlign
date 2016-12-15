@@ -72,7 +72,7 @@ and then,
     docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash
 
 
-
+The output files from each modules are explained [here](https://github.com/drmaize/ThermoAlign#output-files). 
 Advanced use:
 ================================================
 
