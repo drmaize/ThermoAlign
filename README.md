@@ -16,7 +16,7 @@ Alternatively, individual components of ThermoAlign may also be separately run i
 
 
 
-Simple run case of ThermoAlign.
+Simple run case of a ThermoAlign Docker image:
 ================================================
 TA_1.0.0_s is a Docker image containing a small set of sample files that can be used to test ThermoAlign
 
@@ -66,9 +66,10 @@ and then,
 
 
 
+Advanced use:
+================================================
 
-
-Requirements for directly running the source code
+Requirements for directly running the source code:
 ================================================
 * Linux/Unix
 * [Python  2.7](http://python.org/)
