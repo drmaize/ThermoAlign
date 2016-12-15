@@ -35,13 +35,16 @@ These docker images include a vim text editor so that users may modify the Therm
 
     cd TA_codes/                    # move to TA_codes directory
     
+    
     python vcf_conversion.py        # one time preprocessing of vcf files in "../sample_vcf" directory
     
     
 parameters.py file is where users can modify/input specific parameters corresponding to all ThermoAlign modules. The conditions used for PCR following NEB PCR is given by default.
 
     
-    vim parameters.py               # to modify any primer design parameters
+    vim parameters.py               # to modify any primer design parameters (then type "i" to insert/modify values; "Escape" keyboard button followed by ":x" to save and quit)
+    
+    
     
     ./pipeline.sh                   # run ThermoAlign scripts to design the minimal tiling path of template specific and multiplex compatible sets of primers
 
