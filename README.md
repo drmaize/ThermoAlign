@@ -62,14 +62,6 @@ After exiting from a container, the output files may be copied from the containe
     docker cp 024894d25e19:/TA_codes/TA_2016-08-08T15_23_29_531468/ ./
     
 
-    
-These docker containers may be run on a cluster in interactive mode:
-    
-    qsub -I -V -N intrctv -l nodes=biomix17:ppn=5
-    
-and then,
-    
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash
 
 
 The output files from each modules are explained [here](https://github.com/drmaize/ThermoAlign#output-files). 
@@ -124,6 +116,15 @@ To run a docker image as a container that can be accessed via bash:
                             
     docker run -t -i drmaize/thermoalign:TA_1.0.0_Zm3 /bin/bash         #(a maize ready version)
 
+
+    
+These docker containers may be run on a cluster in interactive mode:
+    
+    qsub -I -V -N intrctv -l nodes=biomix17:ppn=5
+    
+and then,
+    
+    docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash
     
 
 Please be aware that the available memory for running these docker containers should be greater than the combined size of the whole genome and variant files.
