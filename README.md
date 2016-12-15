@@ -14,7 +14,7 @@ The shell script [pipeline.sh](https://github.com/drmaize/ThermoAlign/blob/maste
 Alternatively, individual components of ThermoAlign may also be separately run in the following order:
 1) TRS.py; 2) UOD.py 3) PSE.py 4) PPS.py
 
-
+Here is link for a simple run of ThermoAlign Docker containing a small sample genome and variant file.
 
 Requirements for directly running the source code
 ================================================
