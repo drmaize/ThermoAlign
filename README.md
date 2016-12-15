@@ -21,7 +21,7 @@ Simple run case of a ThermoAlign Docker image:
 TA_1.0.0_s is a Docker image containing a small set of sample files that can be used to test ThermoAlign
 
 
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash           (container with a sample genome and sample polymorphism file, for quick testing of ThermoAlign)
+    docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash           #(container with a sample genome and sample polymorphism file, for quick testing of ThermoAlign)
 
 ![alt tag](https://github.com/drmaize/ThermoAlign/blob/master/images/docker_screen_shot.png)
 
@@ -103,19 +103,19 @@ Basic [docker commands](https://goo.gl/TfU9AY) to run software containers such a
 
 To run a docker image as a container that can be accessed via bash:
 
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash           (container with a sample genome and sample polymorphism file, for quick testing of ThermoAlign)
+    docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash           #(container with a sample genome and sample polymorphism file, for quick testing of ThermoAlign)
     
     
                             OR
                             
                             
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_d /bin/bash           (a container without any reference genome or polymorphism file)
+    docker run -t -i drmaize/thermoalign:TA_1.0.0_d /bin/bash           #(a container without any reference genome or polymorphism file)
     
     
                             OR
                             
                             
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_Zm3 /bin/bash         (a maize ready version)
+    docker run -t -i drmaize/thermoalign:TA_1.0.0_Zm3 /bin/bash         #(a maize ready version)
 
     
 
