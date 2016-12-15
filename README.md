@@ -116,7 +116,7 @@ To run a docker image as a container that can be accessed via bash:
                             
     docker run -t -i drmaize/thermoalign:TA_1.0.0_Zm3 /bin/bash         #(a maize ready version)
 
-
+Follow the [Simple run case of a ThermoAlign Docker image](https://github.com/drmaize/ThermoAlign#simple-run-case-of-a-thermoalign-docker-image) to run these Docker images.
     
 These docker containers may be run on a cluster in interactive mode:
     
@@ -131,8 +131,9 @@ Please be aware that the available memory for running these docker containers sh
 
 
 The provided docker containers work best for smaller genomes, with user defined regions of < 10 kb sizes, at narrow primer size, Tm and GC ranges.
-  
-   
+
+
+
 Format for external whole genome and variant files:
 ================================================
 
