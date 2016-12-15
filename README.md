@@ -14,7 +14,59 @@ The shell script [pipeline.sh](https://github.com/drmaize/ThermoAlign/blob/maste
 Alternatively, individual components of ThermoAlign may also be separately run in the following order:
 1) TRS.py; 2) UOD.py 3) PSE.py 4) PPS.py
 
-Here is link for a simple run of ThermoAlign Docker containing a small sample genome and variant file.
+
+
+Simple run case of ThermoAlign.
+================================================
+TA_1.0.0_s is a Docker image containing a small set of sample files that can be used to test ThermoAlign
+
+
+    docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash           (container with a sample genome and sample polymorphism file, for quick testing of ThermoAlign)
+
+![alt tag](https://github.com/drmaize/ThermoAlign/blob/master/images/docker_screen_shot.png)
+
+
+
+This will pull the latest ThermoAlign images from docker hub and generate a new ThermoAlign container in your local machine. 
+If the particular image is already present in your local system, this would simply run a container based on that image. 
+You would be automatically be in a position to start executing commands within the linux environment provided in the docker container.
+These docker images include a vim text editor so that users may modify the ThermoAlign parameters.
+
+
+    cd TA_codes/                    # move to TA_codes directory
+    
+    python vcf_conversion.py        # one time preprocessing of vcf files in "../sample_vcf" directory
+    
+    vim parameters.py               # to modify any primer design parameters
+    
+    ./pipeline.sh                   # run ThermoAlign scripts to design the minimal tiling path of template specific and multiplex compatible sets of primers
+
+
+
+![alt tag](https://github.com/drmaize/ThermoAlign/blob/master/images/docker_screen_shot_2.png)
+
+    
+After exiting from a container, the output files may be copied from the container to host.
+
+    docker cp <containerId>:/file/path/within/container /host/path/target
+    
+    example:
+    
+    docker cp 024894d25e19:/TA_codes/TA_2016-08-08T15_23_29_531468/ ./
+    
+
+    
+These docker containers may be run on a cluster in interactive mode:
+    
+    qsub -I -V -N intrctv -l nodes=biomix17:ppn=5
+    
+and then,
+    
+    docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash
+
+
+
+
 
 Requirements for directly running the source code
 ================================================
@@ -64,49 +116,6 @@ To run a docker image as a container that can be accessed via bash:
                             
     docker run -t -i drmaize/thermoalign:TA_1.0.0_Zm3 /bin/bash         (a maize ready version)
 
-
-
-
-![alt tag](https://github.com/drmaize/ThermoAlign/blob/master/images/docker_screen_shot.png)
-
-
-
-This will pull the latest ThermoAlign images from docker hub and generate a new ThermoAlign container in your local machine. 
-If the particular image is already present in your local system, this would simply run a container based on that image. 
-You would be automatically be in a position to start executing commands within the linux environment provided in the docker container.
-These docker images include a vim text editor so that users may modify the ThermoAlign parameters.
-
-
-    cd TA_codes/                    # move to TA_codes directory
-    
-    python vcf_conversion.py        # one time preprocessing of vcf files in "../sample_vcf" directory
-    
-    vim parameters.py               # to modify any primer design parameters
-    
-    ./pipeline.sh                   # run ThermoAlign scripts to design the minimal tiling path of template specific and multiplex compatible sets of primers
-
-
-
-![alt tag](https://github.com/drmaize/ThermoAlign/blob/master/images/docker_screen_shot_2.png)
-
-    
-After exiting from a container, the output files may be copied from the container to host.
-
-    docker cp <containerId>:/file/path/within/container /host/path/target
-    
-    example:
-    
-    docker cp 024894d25e19:/TA_codes/TA_2016-08-08T15_23_29_531468/ ./
-    
-
-    
-These docker containers may be run on a cluster in interactive mode:
-    
-    qsub -I -V -N intrctv -l nodes=biomix17:ppn=5
-    
-and then,
-    
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash
     
 
 Please be aware that the available memory for running these docker containers should be greater than the combined size of the whole genome and variant files.
