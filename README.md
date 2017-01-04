@@ -21,33 +21,27 @@ Simple run case of a ThermoAlign Docker image:
 ================================================
 TA_1.0.0_s is a Docker image containing a small set of sample files that can be used to test ThermoAlign. After installing Docker, run the following command:
 
+    # Step 1:
     docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash           
 
 ![alt tag](https://github.com/drmaize/ThermoAlign/blob/master/images/docker_screen_shot.png)
 
-This will pull the latest ThermoAlign images from docker hub and generate a new ThermoAlign container in your local machine. 
-If the particular image is already present in your local system, this would simply run a container based on that image. 
-You would be automatically be in a position to start executing commands within the linux environment provided in the docker container.
-These docker images include a vim text editor so that users may modify the ThermoAlign parameters.
+This will pull TA_1.0.0_s from docker hub and generate a new ThermoAlign container in your local machine. If the particular image is already present in your local system, this would open the container for that image. You would automatically be in a position to start executing commands within the linux environment provided in the docker container. The docker images include a vim text editor so that users may modify the parameters file.
 
+    # Step 2: move to TA_codes directory
+    cd TA_codes/
+    
+    # Step 3: perform one-time preprocessing of vcf files in "../sample_vcf" directory
+    python vcf_conversion.py
+    
+Standard default parameters are preset, but users can modify the parameters.py file to adjust design parameters in each module of ThermoAlign.
 
-    cd TA_codes/                    # move to TA_codes directory
-    
-    
-    python vcf_conversion.py        # one time preprocessing of vcf files in "../sample_vcf" directory
-    
-    
-parameters.py file is where users can modify/input specific parameters corresponding to all ThermoAlign modules. The conditions used for PCR following NEB PCR is given by default.
-
-    #use the vim editor to modify design parameters 
-    #type "i" to insert/modify values; use the "Esc" keyboard button followed by ":x" to save and quit
+    # Step 4 (optional): the vim editor can be used to modify design parameters 
+    # type "i" to insert/modify values; use the "Esc" keyboard button followed by ":x" to save and quit
     vim parameters.py
     
-    
-    #run ThermoAlign scripts to design the minimal tiling path of template-specific and multiplex-compatible sets of primers
+    # Step 5: run ThermoAlign
     ./pipeline.sh
-
-
 
 ![alt tag](https://github.com/drmaize/ThermoAlign/blob/master/images/docker_screen_shot_2.png)
 
@@ -59,8 +53,6 @@ After exiting from a container, the output files may be copied from the containe
     example:
     
     docker cp 024894d25e19:/TA_codes/TA_2016-08-08T15_23_29_531468/ ./
-    
-
 
 
 The output files from each modules are explained [here](https://github.com/drmaize/ThermoAlign#output-files). 
@@ -80,45 +72,34 @@ Requirements for directly running the source code:
 * [networkx    1.11](https://networkx.github.io/)
 
 
-<h2 id="docker">ThermoAlign Docker images</h2>
+<h2 id="docker">ThermoAlign is Dockerized</h2>
 ================================================
-Beyond the source code, the following Docker images are made available: 
+Docker is an efficient way to port ThermoAlign across systems and operating systems. The following docker images facillitate the deployment of ThermoAlign without the user needing to install any of its components.
+
 * (i) TA_1.0.0_s is a sample run version containing a small set of sample files that can be used to test ThermoAlign
 * (ii) TA_1.0.0_d is a general distributable version which requires user supplied files
-* (iii) TA_1.0.0_Zm3 is a maize ready version containing all components required for running ThermoAlign as described in this study
+* (iii) TA_1.0.0_Zm3 is a maize-ready version containing all components required for running ThermoAlign as described by Francis et al. #######.
 
-    
-These docker images help automate deployment of ThermoAlign inside docker containers. It is an efficient way to port ThermoAlign across systems and operating systems.
-
-For optimum performance with large and highly repetitive genomes such as the maize genome, it is highly recommended that the source codes be run natively, with the required dependencies installed on your local machine/cluster. 
+Note: for optimum performance with large and highly repetitive genomes such as the maize genome, it may be better to run the source code natively, with each of the required dependencies installed on your local machine or cluster. 
 
 Installing Docker:
 ================================================
-Docker installation can be done by visiting the [official Docker installation page](https://docs.docker.com/engine/installation/) and following the instructions tailored for your operating system.
+Docker installation can be done by visiting the official Docker installation page at: https://docs.docker.com/engine/installation/
 
-Basic [docker commands](https://goo.gl/TfU9AY) to run software containers such as ThermoAlign can be found [here](https://goo.gl/TfU9AY) or on [docs.docker.com](https://docs.docker.com/).
+Docker commands are described at https://sites.google.com/site/felixfranciersite/blogs/docker or https://docs.docker.com/engine/reference/commandline/.
 
+Three docker images available:
 
-To run a docker image as a container that can be accessed via bash:
-
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash           #(container with a sample genome and sample polymorphism file, for quick testing of ThermoAlign)
-    
-    
-                            OR
+    # Option 1: container with a sample genome and sample polymorphism file, for quick testing of ThermoAlign
+    docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash
                             
-                            
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_d /bin/bash           #(a container without any reference genome or polymorphism file)
-    
-    
-                            OR
-                            
-                            
-    #a maize ready version
+    # Option 2: container without any reference genome or polymorphism file (user needs to supply these files)
+    docker run -t -i drmaize/thermoalign:TA_1.0.0_d /bin/bash
+                      
+    # Option 3: maize-ready version
     docker run -t -i drmaize/thermoalign:TA_1.0.0_Zm3 /bin/bash
-
-Follow the [Simple run case of a ThermoAlign Docker image](https://github.com/drmaize/ThermoAlign#simple-run-case-of-a-thermoalign-docker-image) to run these Docker images.
     
-These docker containers may be run on a cluster in interactive mode:
+On a cluster using the qsub batch manager, Docker containers may be run in interactive mode:
     
     qsub -I -V -N intrctv -l nodes=biomix17:ppn=5
     
@@ -126,12 +107,7 @@ and then,
     
     docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash
     
-
-Please be aware that the available memory for running these docker containers should be greater than the combined size of the whole genome and variant files.
-
-
-The provided docker containers work best for smaller genomes, with user defined regions of < 10 kb sizes, at narrow primer size, Tm and GC ranges.
-
+Be aware that the available memory for running these docker containers should be greater than the combined size of the whole genome and variant files.
 
 
 Format for external whole genome and variant files:
