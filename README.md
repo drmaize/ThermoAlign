@@ -6,14 +6,17 @@ ThermoAlign is a genome-aware oligonucleotide design algorithm embedded within a
 Lisencing and access:
 ================================================
 -ThermoAlign is released under a GNU GPLv3 open source license. 
+
 -The source code is available on GitHub: https://github.com/drmaize/ThermoAlign/tree/master/TA_codes
--Ready-to-use Docker images are available on Docker: https://github.com/drmaize/ThermoAlign#thermoalign-docker-images) of ThermoAlign with all the required dependencies are also provided.
 
-The required parameters need to be used in the [parameters.py](https://github.com/drmaize/ThermoAlign/blob/master/TA_codes/parameters.py) file.
+-No need to install the dependencies; Docker images can be dowloaded (see: https://github.com/drmaize/ThermoAlign#thermoalign-docker-images)
 
-The shell script [pipeline.sh](https://github.com/drmaize/ThermoAlign/blob/master/TA_codes/pipeline.sh) would run all the required ThermoAlign components.
 
-Alternatively, individual components of ThermoAlign may also be separately run in the following order:
+-Run parameters are defined in a parameters.py file (https://github.com/drmaize/ThermoAlign/blob/master/TA_codes/parameters.py)
+
+-A shell script can be used to run ThermoAlign (https://github.com/drmaize/ThermoAlign/blob/master/TA_codes/pipeline.sh) 
+
+-Alternatively, each component of ThermoAlign can be run separately in the following order:
 1) TRS.py; 2) UOD.py 3) PSE.py 4) PPS.py
 
 
