@@ -10,9 +10,9 @@ Licensing and access:
 
 -No need to install the dependencies; Docker images can be accessed to run ThermoAlign on any platform (see: <a href="#docker">below</a>)
 
--Run parameters are defined in a parameters.py file (https://github.com/drmaize/ThermoAlign/blob/master/TA_codes/parameters.py)
+-Run parameters are defined in a parameters.py file: https://github.com/drmaize/ThermoAlign/blob/master/TA_codes/parameters.py
 
--A shell script can be used to run all components (https://github.com/drmaize/ThermoAlign/blob/master/TA_codes/pipeline.sh) 
+-A shell script can be used to run all components: https://github.com/drmaize/ThermoAlign/blob/master/TA_codes/pipeline.sh
 
 -Alternatively, each component of ThermoAlign can be run separately in the following order:
 1) TRS.py; 2) UOD.py; 3) PSE.py; 4) PPS.py
