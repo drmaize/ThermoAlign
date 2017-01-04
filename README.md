@@ -20,17 +20,14 @@ Lisencing and access:
 1) TRS.py; 2) UOD.py 3) PSE.py 4) PPS.py
 
 
-
 Simple run case of a ThermoAlign Docker image:
 ================================================
 TA_1.0.0_s is a Docker image containing a small set of sample files that can be used to test ThermoAlign
 
-
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash           #(container with a sample genome and sample polymorphism file, for quick testing of ThermoAlign)
+    #container with a sample genome and sample polymorphism file, for quick testing of ThermoAlign
+    docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash           
 
 ![alt tag](https://github.com/drmaize/ThermoAlign/blob/master/images/docker_screen_shot.png)
-
-
 
 This will pull the latest ThermoAlign images from docker hub and generate a new ThermoAlign container in your local machine. 
 If the particular image is already present in your local system, this would simply run a container based on that image. 
