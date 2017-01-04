@@ -3,9 +3,11 @@ Overview of ThermoAlign:
 ThermoAlign is a genome-aware oligonucleotide design algorithm embedded within a distributable tool designed for targeted resequencing. ThermoAlign's applications range from basic PCR primer pair design to the design of multiplexed primer pairs constituting amplicon tiling paths. Prior SNP and indel information can be provided to facilitate the design of oligonucleotides across conserved sequences. Using a reference genome sequence, BLAST is used to perform a genome-wide searches for sequences similar to each candidate primer. For each off-target hit the melting temperature (Tm) is estimated. To obtain accurate estimates of the Tm, the local alignment of each BLAST hit is used as a seed to create full-length primer-template alignments -- <i>thermoalignments</i> -- from which the Tm is computed. Oligonucleotides with sufficiently greater melting temperatures than all of its predicted off-target binding sites are identified and reported. A directed graph analysis (shortest path algorithm) is used to identify the minimum number of primer pairs forming an amplicon tiling path providing the greatest coverage across a target region.
 
 
-Running ThermoAlign:
+Lisencing and access:
 ================================================
-ThermoAlign is released under a GNU GPLv3 open source license. The source code can be found <a href="https://github.com/drmaize/ThermoAlign/tree/master/TA_codes">here</a>.(https://github.com/drmaize/ThermoAlign/tree/master/TA_codes) [Docker images] (https://github.com/drmaize/ThermoAlign#thermoalign-docker-images) of ThermoAlign with all the required dependencies are also provided.
+-ThermoAlign is released under a GNU GPLv3 open source license. 
+-The source code is available on GitHub: https://github.com/drmaize/ThermoAlign/tree/master/TA_codes
+-Ready-to-use Docker images are available on Docker: https://github.com/drmaize/ThermoAlign#thermoalign-docker-images) of ThermoAlign with all the required dependencies are also provided.
 
 The required parameters need to be used in the [parameters.py](https://github.com/drmaize/ThermoAlign/blob/master/TA_codes/parameters.py) file.
 
