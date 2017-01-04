@@ -21,31 +21,30 @@ Simple run case of a ThermoAlign Docker image:
 ================================================
 TA_1.0.0_s is a Docker image containing a small set of sample files that can be used to test ThermoAlign. After installing Docker, run the following command:
 
-    # Step 1:
+    # Command 1:
     docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash           
 
 ![alt tag](https://github.com/drmaize/ThermoAlign/blob/master/images/docker_screen_shot.png)
 
 This will pull TA_1.0.0_s from docker hub and generate a new ThermoAlign container in your local machine. If the particular image is already present in your local system, this would open the container for that image. You would automatically be in a position to start executing commands within the linux environment provided in the docker container. The docker images include a vim text editor so that users may modify the parameters file.
 
-    # Step 2: move to TA_codes directory
+    # Command 2: move to TA_codes directory
     cd TA_codes/
     
-    # Step 3: perform one-time preprocessing of vcf files in "../sample_vcf" directory
+    # Command 3: perform one-time preprocessing of vcf files in "../sample_vcf" directory
     python vcf_conversion.py
     
 Standard default parameters are preset, but users can modify the parameters.py file to adjust design parameters in each module of ThermoAlign.
 
-    # Step 4 (optional): the vim editor can be used to modify design parameters 
+    # Command 4 (optional): the vim editor can be used to modify design parameters 
     # type "i" to insert/modify values; use the "Esc" keyboard button followed by ":x" to save and quit
     vim parameters.py
     
-    # Step 5: run ThermoAlign
+    # Command 5: run ThermoAlign
     ./pipeline.sh
 
 ![alt tag](https://github.com/drmaize/ThermoAlign/blob/master/images/docker_screen_shot_2.png)
 
-    
 After exiting from a container, the output files may be copied from the container to host.
 
     docker cp <containerId>:/file/path/within/container /host/path/target
