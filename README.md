@@ -17,7 +17,7 @@ Licensing and access:
 -A shell script can be used to run ThermoAlign (https://github.com/drmaize/ThermoAlign/blob/master/TA_codes/pipeline.sh) 
 
 -Alternatively, each component of ThermoAlign can be run separately in the following order:
-1) TRS.py; 2) UOD.py 3) PSE.py 4) PPS.py
+1) TRS.py; 2) UOD.py; 3) PSE.py; 4) PPS.py
 
 
 Simple run case of a ThermoAlign Docker image:
