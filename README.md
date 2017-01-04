@@ -8,25 +8,25 @@ Licensing and access:
 
 -The source code is available on GitHub: https://github.com/drmaize/ThermoAlign/tree/master/TA_codes
 
--No need to install the dependencies; Docker images can be accessed (see: <a href="#docker">below</a>)
+-No need to install the dependencies; Docker images can be accessed to run ThermoAlign on any platform (see: <a href="#docker">below</a>)
 
 -Run parameters are defined in a parameters.py file (https://github.com/drmaize/ThermoAlign/blob/master/TA_codes/parameters.py)
 
--A shell script can be used to run ThermoAlign (https://github.com/drmaize/ThermoAlign/blob/master/TA_codes/pipeline.sh) 
+-A shell script can be used to run all components (https://github.com/drmaize/ThermoAlign/blob/master/TA_codes/pipeline.sh) 
 
 -Alternatively, each component of ThermoAlign can be run separately in the following order:
 1) TRS.py; 2) UOD.py; 3) PSE.py; 4) PPS.py
 
 Simple run case of a ThermoAlign Docker image:
 ================================================
-TA_1.0.0_s is a Docker image containing a small set of sample files that can be used to test ThermoAlign. After installing Docker, run the following command:
+TA_1.0.0_s is a Docker image containing a small set of sample files that can be used to test ThermoAlign. After installing <a href="https://docs.docker.com/engine/installation/">Docker</a>, run the following command:
 
     # Command 1:
     docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash           
 
 ![alt tag](https://github.com/drmaize/ThermoAlign/blob/master/images/docker_screen_shot.png)
 
-This will pull TA_1.0.0_s from docker hub and generate a new ThermoAlign container in your local machine. If the particular image is already present in your local system, this would open the container for that image. You would automatically be in a position to start executing commands within the linux environment provided in the docker container. The docker images include a vim text editor so that users may modify the parameters file.
+This will pull TA_1.0.0_s from docker hub, generate a new ThermoAlign container in your local machine and open the container where commands can be executed. If the image is already present in your local system, Docker will skip the download step.
 
     # Command 2: move to TA_codes directory
     cd TA_codes/
@@ -34,11 +34,13 @@ This will pull TA_1.0.0_s from docker hub and generate a new ThermoAlign contain
     # Command 3: perform one-time preprocessing of vcf files in "../sample_vcf" directory
     python vcf_conversion.py
     
-Standard default parameters are preset, but users can modify the parameters.py file to adjust design parameters in each module of ThermoAlign.
+Standard default parameters are preset, but users can modify the parameters.py file to adjust design parameters in each module of ThermoAlign. The the Docker images include a vim text editor so that users may modify the parameters file. Have a look at the parameters file using the following command:
 
     # Command 4 (optional): the vim editor can be used to modify design parameters 
     # type "i" to insert/modify values; use the "Esc" keyboard button followed by ":x" to save and quit
     vim parameters.py
+    
+Once you've exited from vim, ThermoAlign can be run.
     
     # Command 5: run ThermoAlign
     ./pipeline.sh
@@ -49,10 +51,8 @@ After exiting from a container, the output files may be copied from the containe
 
     docker cp <containerId>:/file/path/within/container /host/path/target
     
-    example:
-    
+    # example
     docker cp 024894d25e19:/TA_codes/TA_2016-08-08T15_23_29_531468/ ./
-
 
 The output files from each modules are explained [here](https://github.com/drmaize/ThermoAlign#output-files). 
 Advanced use:
