@@ -9,8 +9,7 @@ Licensing and access:
 
 -The source code is available on GitHub: https://github.com/drmaize/ThermoAlign/tree/master/TA_codes
 
--No need to install the dependencies; Docker images can be dowloaded (see: https://github.com/drmaize/ThermoAlign#thermoalign-docker-images)
-
+-No need to install the dependencies; Docker images can be accessed (see: <a href="#docker">below</a>)
 
 -Run parameters are defined in a parameters.py file (https://github.com/drmaize/ThermoAlign/blob/master/TA_codes/parameters.py)
 
@@ -43,12 +42,13 @@ These docker images include a vim text editor so that users may modify the Therm
     
 parameters.py file is where users can modify/input specific parameters corresponding to all ThermoAlign modules. The conditions used for PCR following NEB PCR is given by default.
 
+    #use the vim editor to modify design parameters 
+    #type "i" to insert/modify values; use the "Esc" keyboard button followed by ":x" to save and quit
+    vim parameters.py
     
-    vim parameters.py               # to modify any primer design parameters (then type "i" to insert/modify values; "Escape" keyboard button followed by ":x" to save and quit)
     
-    
-    
-    ./pipeline.sh                   # run ThermoAlign scripts to design the minimal tiling path of template specific and multiplex compatible sets of primers
+    #run ThermoAlign scripts to design the minimal tiling path of template-specific and multiplex-compatible sets of primers
+    ./pipeline.sh
 
 
 
@@ -83,7 +83,7 @@ Requirements for directly running the source code:
 * [networkx    1.11](https://networkx.github.io/)
 
 
-ThermoAlign Docker images:
+<h2 id="docker">ThermoAlign Docker images</h2>
 ================================================
 Beyond the source code, the following Docker images are made available: 
 * (i) TA_1.0.0_s is a sample run version containing a small set of sample files that can be used to test ThermoAlign
@@ -116,7 +116,8 @@ To run a docker image as a container that can be accessed via bash:
                             OR
                             
                             
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_Zm3 /bin/bash         #(a maize ready version)
+    #a maize ready version
+    docker run -t -i drmaize/thermoalign:TA_1.0.0_Zm3 /bin/bash
 
 Follow the [Simple run case of a ThermoAlign Docker image](https://github.com/drmaize/ThermoAlign#simple-run-case-of-a-thermoalign-docker-image) to run these Docker images.
     
