@@ -70,10 +70,9 @@ Requirements for directly running the source code:
 * [networkx    1.11](https://networkx.github.io/)
 
 
-<h2 id="docker">
+<h1 id="docker">
 ThermoAlign is Dockerized
-</h2>
-================================================
+</h1>
 Docker is an efficient way to port ThermoAlign across systems and operating systems. The following docker images facilitate deployment of ThermoAlign without the user needing to install any of its components.
 
 * (i) TA_1.0.0_s is a sample run version containing a small set of sample files that can be used to test ThermoAlign
@@ -127,8 +126,9 @@ The variant vcf files should be named as            :   chr1.vcf, chr2.vcf etc
 vcf format (1000 genomes project format)            :   A vcf file (v4.0 or v4.1) based on the same coordinate system of the reference genome sequence may be optionally used for polymorphism-aware primer design
 
 
-<h2 id="output">Output files:</h2>
-================================================
+<h1 id="output">
+Output Files
+</h1>
 
 All output files will be saved in a directory named based on the timestamp of TA_year-month-date-time format (for example :TA_2016-09-13T09_05_00_545957).
 
