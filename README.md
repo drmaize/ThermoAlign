@@ -72,8 +72,8 @@ Requirements for directly running the source code:
 
 <h2 id="docker">
 ThermoAlign is Dockerized
-================================================
 </h2>
+================================================
 Docker is an efficient way to port ThermoAlign across systems and operating systems. The following docker images facilitate deployment of ThermoAlign without the user needing to install any of its components.
 
 * (i) TA_1.0.0_s is a sample run version containing a small set of sample files that can be used to test ThermoAlign
