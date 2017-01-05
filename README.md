@@ -12,7 +12,7 @@ Licensing and access
 * Alternatively, each component of ThermoAlign can be run separately in the following order:
 1) TRS.py; 2) UOD.py; 3) PSE.py; 4) PPS.py
 
-Simple run case of a ThermoAlign Docker image
+Simple Run Case for a ThermoAlign Docker Image
 ================================================
 TA_1.0.0_s is a Docker image containing a small set of sample files that can be used to test ThermoAlign. After installing <a href="https://docs.docker.com/engine/installation/">Docker</a>, run the following command:
 
@@ -51,9 +51,9 @@ After exiting from a container, the output files may be copied from the containe
 
 The output files from each modules are explained <a href="#output">here</a>. 
 
-Advanced use:
+Advanced Use
 ================================================
-Requirements for directly running the source code:
+<h2>Requirements for directly running the source code</h2>
 * Linux/Unix
 * [Python  2.7](http://python.org/)
 * [NumPy   1.9.2](http://www.numpy.org/)
