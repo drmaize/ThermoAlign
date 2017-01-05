@@ -53,7 +53,7 @@ The output files from each modules are explained <a href="#output">here</a>.
 
 Advanced Use
 ================================================
-<h2>Requirements for directly running the source code</h2>
+Requirements for directly running the source code:
 * Linux/Unix
 * [Python  2.7](http://python.org/)
 * [NumPy   1.9.2](http://www.numpy.org/)
@@ -63,7 +63,6 @@ Advanced Use
 * [BLAST   2.2.31+](http://blast.ncbi.nlm.nih.gov/Blast.cgi)
 * [MultiPLX    2.0](http://bioinfo.ut.ee/download/dl.php?file=24)
 * [networkx    1.11](https://networkx.github.io/)
-
 
 <h1 id="docker">
 ThermoAlign is Dockerized
@@ -76,7 +75,7 @@ Docker is an efficient way to port ThermoAlign across systems and operating syst
 
 Note: for optimum performance with large and highly repetitive genomes such as the maize genome, it may be better to run the source code natively, with each of the required dependencies installed on your local machine or cluster. 
 
-Installing Docker:
+Installing Docker
 ================================================
 Docker installation can be done by visiting the official Docker installation page at: https://docs.docker.com/engine/installation/
 
