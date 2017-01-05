@@ -49,20 +49,7 @@ After exiting from a container, the output files may be copied from the containe
     # example
     docker cp 024894d25e19:/TA_codes/TA_2016-08-08T15_23_29_531468/ ./
 
-The output files from each modules are explained <a href="#output">here</a>. 
-
-Advanced Use
-================================================
-Requirements for directly running the source code:
-* Linux/Unix
-* [Python  2.7](http://python.org/)
-* [NumPy   1.9.2](http://www.numpy.org/)
-* [pandas  0.18.1](http://pandas.pydata.org/)
-* [Cython  0.24](http://cython.org/)
-* [primer3-py  0.5.1](https://pypi.python.org/pypi/primer3-py)
-* [BLAST   2.2.31+](http://blast.ncbi.nlm.nih.gov/Blast.cgi)
-* [MultiPLX    2.0](http://bioinfo.ut.ee/download/dl.php?file=24)
-* [networkx    1.11](https://networkx.github.io/)
+The output files from each modules are explained <a href="#output">here</a>.
 
 <h1 id="docker">
 ThermoAlign is Dockerized
@@ -175,6 +162,19 @@ TA_2016-09-13T09_05_00_545957_multiplex_groups_set1_1.txt, TA_2016-09-13T09_05_0
 TA_2016-09-13T09_05_00_545957_bed_separate_tracks_selected_oligos.bed: .bed formatted files of the primers for further analysis and visualization.
 
 TA_2016-09-13T09_05_00_545957_multiplx_pooled_output.txt            : .txt file with the list of primer pairs grouped as multiplex compatible sets. All primers in each set may be used in a single reaction.
+
+Advanced Use
+================================================
+ThermoAlign can be executed via Python on a local cluster independent of Docker. This requires installation of the following components. The versions listed are those distributed in the Docker container. Newer versions of these components have not been tested with ThermoAlign.
+* Linux/Unix
+* [Python  2.7](http://python.org/)
+* [NumPy   1.9.2](http://www.numpy.org/)
+* [pandas  0.18.1](http://pandas.pydata.org/)
+* [Cython  0.24](http://cython.org/)
+* [primer3-py  0.5.1](https://pypi.python.org/pypi/primer3-py)
+* [BLAST   2.2.31+](http://blast.ncbi.nlm.nih.gov/Blast.cgi)
+* [MultiPLX    2.0](http://bioinfo.ut.ee/download/dl.php?file=24)
+* [networkx    1.11](https://networkx.github.io/)
 
 
 
