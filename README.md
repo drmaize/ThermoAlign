@@ -1,8 +1,8 @@
-Overview of ThermoAlign:
+Overview of ThermoAlign
 ================================================
 ThermoAlign is a genome-aware oligonucleotide design algorithm embedded within a distributable tool designed for targeted resequencing. ThermoAlign's applications range from basic PCR primer pair design to the design of multiplexed primer pairs constituting amplicon tiling paths. Prior SNP and indel information can be provided to facilitate the design of oligonucleotides across conserved sequences. Using a reference genome sequence, BLAST is used to perform a genome-wide searches for sequences similar to each candidate primer. For each off-target hit the melting temperature (Tm) is estimated. To obtain accurate estimates of the Tm, the local alignment of each BLAST hit is used as a seed to create full-length primer-template alignments -- <i>thermoalignments</i> -- from which the Tm is computed. Oligonucleotides with sufficiently greater melting temperatures than all of its predicted off-target binding sites are identified and reported. A directed graph analysis (shortest path algorithm) is used to identify the minimum number of primer pairs forming an amplicon tiling path providing the greatest coverage across a target region.
 
-Licensing and access:
+Licensing and access
 ================================================
 -ThermoAlign is released under a GNU GPLv3 open source license. 
 
@@ -17,7 +17,7 @@ Licensing and access:
 -Alternatively, each component of ThermoAlign can be run separately in the following order:
 1) TRS.py; 2) UOD.py; 3) PSE.py; 4) PPS.py
 
-Simple run case of a ThermoAlign Docker image:
+Simple run case of a ThermoAlign Docker image
 ================================================
 TA_1.0.0_s is a Docker image containing a small set of sample files that can be used to test ThermoAlign. After installing <a href="https://docs.docker.com/engine/installation/">Docker</a>, run the following command:
 
