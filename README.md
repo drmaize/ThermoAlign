@@ -59,7 +59,6 @@ The output files from each modules are explained <a href="#output">here</a>.
 Advanced use:
 ================================================
 Requirements for directly running the source code:
-================================================
 * Linux/Unix
 * [Python  2.7](http://python.org/)
 * [NumPy   1.9.2](http://www.numpy.org/)
