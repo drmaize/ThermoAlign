@@ -54,10 +54,10 @@ After exiting from a container, the output files may be copied from the containe
     # example
     docker cp 024894d25e19:/TA_codes/TA_2016-08-08T15_23_29_531468/ ./
 
-The output files from each modules are explained [here](https://github.com/drmaize/ThermoAlign#output-files). 
+The output files from each modules are explained <a href="#output">here</a>. 
+
 Advanced use:
 ================================================
-
 Requirements for directly running the source code:
 ================================================
 * Linux/Unix
@@ -128,12 +128,11 @@ The variant vcf files should be named as            :   chr1.vcf, chr2.vcf etc
 vcf format (1000 genomes project format)            :   A vcf file (v4.0 or v4.1) based on the same coordinate system of the reference genome sequence may be optionally used for polymorphism-aware primer design
 
 
-Output files:
+<h2 id="output">Output files:</h2>
 ================================================
-All output files will be saved in a directory named based on the timestamp of TA_year-month-date-time format (for example :TA_2016-09-13T09_05_00_545957). 
+All output files will be saved in a directory named based on the timestamp of TA_year-month-date-time format (for example :TA_2016-09-13T09_05_00_545957).
 
 Each output file name will start with the same timestamp. 
-
 
 ###  _The TRS module:_
 
