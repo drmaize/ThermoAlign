@@ -53,7 +53,7 @@ After exiting from a container, the output files may be copied from the containe
 
     docker cp <containerId>:/file/path/within/container /host/path/target
     
-    # example (Replace "44a8a1fe2bff" with your docker contaiener id and "TA_2016-08-08T15_23_29_531468/" with the directory name of the TA output files you generated within your container)
+    # example (Replace "44a8a1fe2bff" with your docker contaiener id; "TA_2016-08-08T15_23_29_531468/" with the directory name of the TA output files you generated within your container; "./" with your desired local directory)
     docker cp 44a8a1fe2bff:/TA_codes/TA_2016-08-08T15_23_29_531468/ ./
 
 The output files from each modules are explained <a href="#output">here</a>.
