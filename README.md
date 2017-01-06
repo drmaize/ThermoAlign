@@ -74,6 +74,21 @@ Going Further: ThermoAlign is Dockerized
 * TA_1.0.0_d is a general distributable version which requires user supplied files (reference sequence and variant data)
 * TA_1.0.0_Zm3 is a maize-ready version containing all components required for running ThermoAlign as described by Francis et al. #######.
 
+###  _Opening an existing container_
+
+Containers existing on your machine are in either an open or closed state. This can be determined with the following command:
+
+    # the -a flag will list all (open and closed) containers
+    docker ps -a
+    
+If the container is in an open state (does not say "exited" in the status column), use the following command with the desired container id specified:
+
+    docker exec -it <container_id> /bin/bash
+    
+If the container is in a closed state, use the following command with the desired container id specified:
+
+    docker
+
 Note: for optimum performance with large and highly repetitive genomes such as maize, it may be better to run the source code natively, with each of the required dependencies installed on your local machine or cluster. See the end of this readme for a list of the dependencies required for ThermoAlign.
 
 Further details on Docker commands can be found at the following sites:
