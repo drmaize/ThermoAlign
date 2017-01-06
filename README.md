@@ -85,10 +85,10 @@ The reference sequence for each chromosome needs to be separated into separate f
 chr1.fasta, chr2.fasta etc
 
 For each sequence, the fasta header should be of the following format:
-> &#62chromosome:assembly_ver:chr#:start_pos:end_pos:#sequences
+> &#62;chromosome:assembly_ver:chr#:start_pos:end_pos:#sequences
 
 For example:
-> &#62chromosome:AGPv3:13:1:7261561:1
+> &#62;chromosome:AGPv3:13:1:7261561:1
 
 
 Using your desired reference genome with TA_1.0.0_d
