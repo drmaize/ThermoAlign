@@ -22,7 +22,7 @@ TA_1.0.0_s is a Docker image containing a small set of sample files that can be 
 
 ![alt tag](https://github.com/drmaize/ThermoAlign/blob/master/images/docker_screen_shot.png)
 
-This will pull TA_1.0.0_s from docker hub, generate a new ThermoAlign container in your local machine and open the container where commands can be executed. If the image is already present in your local system, Docker will skip the download step.
+This will pull TA_1.0.0_s from docker hub, generate a new ThermoAlign container in your local machine and open the container where commands can be executed. If the image is already present in your local system and you run the same command, Docker will create a new container. Re-entering an existing container is described in the section below called <a href="#dockerized">"Going Furhther: ThermoAlign is Dockerized."</a>
 
     # Command 2: move to TA_codes directory
     cd TA_codes/
@@ -65,9 +65,9 @@ The next steps show you how to copy the ThermoAlign results from the Docker cont
     # replace "TA_2016-09-16T16_24_05_130340" with the directory name of the output folder;
     # replace "/Users/ffx/Documents/TA_results" with the path to where you want to copy the output to.
 
-
+<h1 id="#dockerized">
 Going Further: ThermoAlign is Dockerized
-================================================
+</h1>
 <a href="https://www.docker.com/">Docker</a> is an efficient way to port ThermoAlign across systems and operating systems. If you stepped through the above use case you already have a good idea on how to use ThermoAlign. The following docker images are available for deployment. TA_1.0.0_d is the version most users will probably want.
 
 * TA_1.0.0_s is a sample run version containing a small set of sample files that can be used to test ThermoAlign
