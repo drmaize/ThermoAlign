@@ -14,7 +14,7 @@ Licensing and access
 
 Simple Run Case for a ThermoAlign Docker Image
 ================================================
-TA_1.0.0_s is a Docker image containing a small set of sample files that can be used to test ThermoAlign. After installing <a href="https://docs.docker.com/engine/installation/">Docker</a>, run the following command:
+TA_1.0.0_s is a Docker image containing a small set of sample files that can be used to test ThermoAlign. First, install <a href="https://docs.docker.com/engine/installation/">Docker</a>. Once Docker is installed on your machine, follow commands 1-8 below to run ThermoAlign:
 
     # Command 1:
     docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash           
@@ -65,21 +65,21 @@ The next steps show you how to copy the ThermoAlign results from the Docker cont
     # replace "/Users/ffx/Documents/TA_results" with the path to where you want to copy the output to.
 
 <h1 id="docker">
-ThermoAlign is Dockerized
+Going Further: ThermoAlign is Dockerized
 </h1>
-<a href="https://www.docker.com/">Docker</a> is an efficient way to port ThermoAlign across systems and operating systems. The following docker images are available for deployment of ThermoAlign.
+<a href="https://www.docker.com/">Docker</a> is an efficient way to port ThermoAlign across systems and operating systems. If you stepped through the above use case you already have a good idea on how to use ThermoAlign. The following docker images are available for deployment. TA_1.0.0_d is the version most users will probably want.
 
-* (i) TA_1.0.0_s is a sample run version containing a small set of sample files that can be used to test ThermoAlign
-* (ii) TA_1.0.0_d is a general distributable version which requires user supplied files (reference sequence and variant data)
-* (iii) TA_1.0.0_Zm3 is a maize-ready version containing all components required for running ThermoAlign as described by Francis et al. #######.
+* TA_1.0.0_s is a sample run version containing a small set of sample files that can be used to test ThermoAlign
+* TA_1.0.0_d is a general distributable version which requires user supplied files (reference sequence and variant data)
+* TA_1.0.0_Zm3 is a maize-ready version containing all components required for running ThermoAlign as described by Francis et al. #######.
 
-Note: for optimum performance with large and highly repetitive genomes such as maize, it may be better to run the source code natively, with each of the required dependencies installed on your local machine or cluster. 
+Note: for optimum performance with large and highly repetitive genomes such as maize, it may be better to run the source code natively, with each of the required dependencies installed on your local machine or cluster. See the end of this readme for a list of the dependencies required for ThermoAlign.
 
-Installing Docker
+Docker commands are described at https://docs.docker.com/engine/reference/commandline/ and https://sites.google.com/site/felixfranciersite/blogs/docker.
+
+Setting up the reference genome in TA_1.0.0_d
 ================================================
-Docker installation can be done by visiting the official Docker installation page at: https://docs.docker.com/engine/installation/
 
-Docker commands are described at https://sites.google.com/site/felixfranciersite/blogs/docker or https://docs.docker.com/engine/reference/commandline/.
 
 Three docker images are available:
 
