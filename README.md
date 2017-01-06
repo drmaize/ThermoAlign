@@ -83,7 +83,7 @@ Containers existing on your machine are in either an open or closed state. This 
     
 If the container is in an open state (does not say "exited" in the status column), use the following command with the desired container id specified:
 
-    docker exec -i -t <container_id> /bin/bash
+    docker exec -it <container_id> /bin/bash
     
 If the container is in an exited status, use the following command with the desired container id specified:
 
@@ -91,7 +91,7 @@ If the container is in an exited status, use the following command with the desi
     
     # followed by 
     
-    docker exec -i -t <container_id> /bin/bash
+    docker exec -it <container_id> /bin/bash
 
 Note: for optimum performance with large and highly repetitive genomes such as maize, it may be better to run the source code natively, with each of the required dependencies installed on your local machine or cluster. See the end of this readme for a list of the dependencies required for ThermoAlign.
 
