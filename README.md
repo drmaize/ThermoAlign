@@ -131,27 +131,34 @@ Each output file name will start with the same timestamp.
 
 ###  _The TRS module:_
 
-TA_2016-09-13T09_05_00_545957_run_summary.txt                       :   An output file with detailed summary statistics from the run
+An output file with detailed summary statistics from the run:
+TA_2016-09-13T09_05_00_545957_run_summary.txt
 
-TA_2016-09-13T09_05_00_545957_3_33000_2001_VariantMasked.fasta      :   Variant masked locus sequence in fasta format
-
+Variant masked locus sequence in fasta format
+TA_2016-09-13T09_05_00_545957_3_33000_2001_VariantMasked.fasta
 
 ###  _The UOD module:_
 
-TA_2016-09-13T09_05_00_545957_UOD_out1_1.fasta                      :   All possible primers (+ & -strands) for the given UOD paramters (.fasta format)
+All possible primers (+ and -strands) for the given UOD paramters (.fasta format):
+TA_2016-09-13T09_05_00_545957_UOD_out1_1.fasta
 
-TA_2016-09-13T09_05_00_545957_UOD_out1_2.txt                        :   All possible primers (+ & -strands) for the given UOD paramters (.txt format). This includes the occurence of each primer in the target locus
+All possible primers (+ and -strands) for the given UOD paramters (.txt format).
+TA_2016-09-13T09_05_00_545957_UOD_out1_2.txt
 
-TA_2016-09-13T09_05_00_545957_UOD_out2_1.fasta                      :   .fasta file of + strand primers
+<i>.fasta</i> file of + strand primers:
+TA_2016-09-13T09_05_00_545957_UOD_out2_1.fasta
 
-TA_2016-09-13T09_05_00_545957_UOD_out2_2.fasta                      :   .fasta file of - strand primers
+<i>.fasta</i> file of - strand primers:
+TA_2016-09-13T09_05_00_545957_UOD_out2_2.fasta
 
-TA_2016-09-13T09_05_00_545957_UOD_out3_1.fasta                      :   .fasta file of + strand primers, with primer location, length and Tm information
+<i>.fasta</i> file of + strand primers, with primer location, length and Tm information
+TA_2016-09-13T09_05_00_545957_UOD_out3_1.fasta
 
-TA_2016-09-13T09_05_00_545957_UOD_out3_2.fasta                      :   .fasta file of - strand primers, with primer location, length and Tm information
+<i>.fasta</i> file of - strand primers, with primer location, length and Tm information
+TA_2016-09-13T09_05_00_545957_UOD_out3_2.fasta
 
-TA_2016-09-13T09_05_00_545957_UOD_out4_1.fasta                      :   .fasta file of + & - strand primers
-
+<i>.fasta</i> file of + & - strand primers
+TA_2016-09-13T09_05_00_545957_UOD_out4_1.fasta
 
 ###  _The PSE module:_
 
