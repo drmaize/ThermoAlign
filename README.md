@@ -189,15 +189,15 @@ contains the non-overlapping primer pair combinations from minimal tiling paths.
 
 TA_2016-09-13T09_05_00_545957_multiplx_input_set1_1.txt, TA_2016-09-13T09_05_00_545957_multiplx_input_set2_1.txt 
 
-</i>.txt<i> file listing names of multiplex compatible groups
+<i>.txt</i> file listing names of multiplex compatible groups
 
 TA_2016-09-13T09_05_00_545957_multiplex_groups_set1_1.txt, TA_2016-09-13T09_05_00_545957_multiplex_groups_set2_1.txt
 
-</i>.bed<i> formatted files of the primers for further analysis and visualization:
+<i>.bed</i> formatted files of the primers for further analysis and visualization:
 
 TA_2016-09-13T09_05_00_545957_bed_separate_tracks_selected_oligos.bed
 
-</i>.txt<i> file with the list of primer pairs grouped as multiplex compatible sets. All primers in each set may be used in a single reaction:
+<i>.txt</i> file with the list of primer pairs grouped as multiplex compatible sets. All primers in each set may be used in a single reaction:
 
 TA_2016-09-13T09_05_00_545957_multiplx_pooled_output.txt
 
@@ -205,16 +205,14 @@ Advanced Use
 ================================================
 ThermoAlign can be executed via Python on a local cluster independent of Docker. This requires installation of the following components. The versions listed are those distributed in the Docker container. Newer versions of these components have not been tested with ThermoAlign.
 * Linux/Unix
-* [Python 2.7](http://python.org/)
-* [NumPy 1.9.2](http://www.numpy.org/)
-* [pandas 0.18.1](http://pandas.pydata.org/)
-* [Cython 0.24](http://cython.org/)
-* [primer3-py 0.5.1](https://pypi.python.org/pypi/primer3-py)
-* [BLAST 2.2.31+](http://blast.ncbi.nlm.nih.gov/Blast.cgi)
-* [MultiPLX 2.0](http://bioinfo.ut.ee/download/dl.php?file=24)
-* [networkx 1.11](https://networkx.github.io/)
-
-
+* <a href="http://python.org/">Python 2.7</a>
+* <a href="http://www.numpy.org/">NumPy 1.9.2</a>
+* <a href="http://pandas.pydata.org/">pandas 0.18.1</a>
+* <a href="http://cython.org/">Cython 0.24</a>
+* <a href="https://pypi.python.org/pypi/primer3-py">primer3-py 0.5.1</a>
+* <a href="http://blast.ncbi.nlm.nih.gov/Blast.cgi">BLAST 2.2.31+</a>
+* <a href="http://bioinfo.ut.ee/download/dl.php?file=24">MultiPLX 2.0</a>
+* <a href="https://networkx.github.io/">networkx 1.11</a>
 
 
                                     ##### END OF README #####
