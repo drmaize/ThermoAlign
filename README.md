@@ -108,8 +108,8 @@ Inputting a custom reference genome for TA_1.0.0_d
 </h1>
 
 ### _Input chromosme_
-The reference sequence for each chromosome needs to be separated into separate files and named as follows: 
-chr1.fasta, chr2.fasta, etc.
+The reference sequence pseudomolecule of each chromosome needs to be separated into separate files and named as follows: 
+>chr1.fasta, chr2.fasta, etc.
 
 For each sequence, the fasta header should be of the following format:
 > &#62;chromosome:assembly_ver:chr#:start_pos:end_pos:#sequences
@@ -120,11 +120,12 @@ For example:
 <h1 id="variants">
 Inputting prior variant info for TA_1.0.0_d
 </h1>
-###  _Input variant vcf file_ 
-A vcf file (v4.0 or v4.1) based on the same coordinate system of the reference genome sequence may be optionally used for polymorphism-aware primer design. This will result in the exclusion of candidate primers that co-localize with variant sites.
 
-The variant vcf files for each chromosome needs to be separated into separate files and named as follows:
-chr1.vcf, chr2.vcf, etc.
+###  _Input variant vcf file_ 
+A <i>.vcf</i> file (v4.0 or v4.1) based on the same coordinate system as the reference genome sequence may be optionally used for polymorphism-aware primer design. This will result in the exclusion of candidate primers that co-localize with variant sites.
+
+The <i>.vcf</i> file needs to be separated into separate files for each chromosome and named as follows:
+>chr1.vcf, chr2.vcf, etc.
 
 
 Running on a cluster with qsub
