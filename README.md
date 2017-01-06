@@ -6,7 +6,7 @@ Licensing and access
 ================================================
 * ThermoAlign is released under a GNU GPLv3 open source license. 
 * The source code is available on GitHub: https://github.com/drmaize/ThermoAlign/tree/master/TA_codes
-* No need to install the dependencies; Docker images can be accessed to run ThermoAlign on any platform (see: <a href="#docker">runcase</a>)
+* No need to install the dependencies; Docker images can be accessed to run ThermoAlign on any platform (see: <a href="#runcase">runcase</a>)
 * Run parameters are defined in a parameters.py file: https://github.com/drmaize/ThermoAlign/blob/master/TA_codes/parameters.py
 * A shell script can be used to run all components: https://github.com/drmaize/ThermoAlign/blob/master/TA_codes/pipeline.sh
 * Alternatively, each component of ThermoAlign can be run separately in the following order:
