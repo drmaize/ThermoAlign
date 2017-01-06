@@ -42,24 +42,22 @@ Once you've exited from vim, ThermoAlign can be run.
 
 ![alt tag](https://github.com/drmaize/ThermoAlign/blob/master/images/docker_screen_shot_2.png)
 
-Note your container id. It is the id following "root@." in your terminal. So for example, if your terminal shows "root@44a8a1fe2bff:", 44a8a1fe2bff is your container id.
+Note your container id. It is the id following "root@." in your terminal. For example, if your terminal shows "root@44a8a1fe2bff:", 44a8a1fe2bff is your container id.
 
 After exiting from a container, the output files may be copied from the container to host.
     
     # Command 6: exit Docker container
     exit
 
-    # Command 7: copy output files from the container to host directory.
-
-    docker cp <containerId>:/file/path/within/container /host/path/target
+    # Command 7: copy output files from the container to your desired local directory.
+    # This command has the following structure
+    docker cp <containerId>:/file/path/within/container /local/path/target
     
-   
-    # Example:
-    # Note: Replace "44a8a1fe2bff" with your docker contaiener id; 
-    # Replace "TA_2016-09-16T16_24_05_130340/" with the directory name of the TA output files you have generated within your container;
-    # Replace "./" with your desired local directory
-    
+    # Here is an example of the actual command which needs to be edited a bit on your machine
     docker cp 44a8a1fe2bff:/TA_codes/TA_2016-09-16T16_24_05_130340/ ./
+    # (i) Replace "44a8a1fe2bff" with the docker contaiener id on your machine; 
+    # (ii) Replace "TA_2016-09-16T16_24_05_130340/" with the directory name of the TA output folder generated after running ThermoAlign;
+    # (iii) Replace "./" with the path for your desired local directory
 
 The output files from each modules are explained <a href="#output">here</a>.
 
