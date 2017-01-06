@@ -53,11 +53,11 @@ After exiting from a container, the output files may be copied from the containe
     # This command has the following structure
     docker cp <containerId>:/file/path/within/container /local/path/target
     
-    # Here is an example of the actual command which needs to be edited a bit on your machine
-    docker cp 44a8a1fe2bff:/TA_codes/TA_2016-09-16T16_24_05_130340/ ./
+    # Here is an example of the actual command, which needs to be edited a bit to reflect details on your machine
+    docker cp 44a8a1fe2bff:/TA_codes/TA_2016-09-16T16_24_05_130340/ /Users/ffx/Documents/ThermoAlign_results
     # (i) Replace "44a8a1fe2bff" with the docker contaiener id on your machine; 
     # (ii) Replace "TA_2016-09-16T16_24_05_130340/" with the directory name of the TA output folder generated after running ThermoAlign;
-    # (iii) Replace "./" with the path for your desired local directory
+    # (iii) Replace "/Users/ffx/Documents/ThermoAlign_results" with the path to the directory you want to copy the output to
 
 The output files from each modules are explained <a href="#output">here</a>.
 
