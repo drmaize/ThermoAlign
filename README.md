@@ -18,7 +18,7 @@ Introductory Run Case for a ThermoAlign Docker Image
 TA_1.0.0_s is a Docker image containing a small set of sample files that can be used to test ThermoAlign. First, you must install <a href="https://docs.docker.com/engine/installation/">Docker</a> on your machine. Once Docker is installed, follow commands 1-8 below to run ThermoAlign.
 
     # Command 1:
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash           
+    docker run -t -i drmaize/thermoalign:TA_1.0.0_s bash           
 
 ![alt tag](https://github.com/drmaize/ThermoAlign/blob/master/images/docker_screen_shot.png)
 
