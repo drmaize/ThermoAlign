@@ -68,11 +68,13 @@ The next steps show you how to copy the ThermoAlign results from the Docker cont
 <h1 id="dockerized">
 Going Further: ThermoAlign is Dockerized
 </h1>
-<a href="https://www.docker.com/">Docker</a> is an efficient way to port ThermoAlign across systems and operating systems. If you stepped through the above use case you already have a good idea on how to use ThermoAlign. The following docker images are available for deployment. TA_1.0.0_d is the version most users will probably want.
+<a href="https://www.docker.com/">Docker</a> is an efficient way to port ThermoAlign across systems and operating systems. If you stepped through the above use case you already have a good idea on how to use ThermoAlign. The following docker images are available for deployment.
 
 * TA_1.0.0_s is a sample run version containing a small set of sample files that can be used to test ThermoAlign
 * TA_1.0.0_d is a general distributable version which requires user supplied files (reference sequence and variant data)
 * TA_1.0.0_Zm3 is a maize-ready version containing all components required for running ThermoAlign as described by Francis et al. #######.
+
+TA_1.0.0_d is the version most users will probably want, which requires inputting of the reference genome and (opriotnally) prior variant information.
 
 ###  _Opening an existing container_
 
