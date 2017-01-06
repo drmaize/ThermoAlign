@@ -32,7 +32,7 @@ This will pull TA_1.0.0_s from docker hub, generate a new ThermoAlign container 
 Standard default parameters are preset, but users can modify the parameters.py file to adjust design parameters in each module of ThermoAlign. The the Docker images include a vim text editor so that users may modify the parameters file. Have a look at the parameters file using the following command:
 
     # Command 4 (optional): the vim editor can be used to modify design parameters 
-    # type "i" to insert/modify values; use the "Esc" keyboard button followed by ":x" to save and quit
+    # type "i" to insert/modify values; use the "Esc" keyboard button followed by ":x" to save and quit.
     vim parameters.py
     
 Once you've exited from vim, ThermoAlign can be run.
@@ -51,18 +51,18 @@ Hopefully the run was a success! The output files from each modules are explaine
 
 The next steps show you how to copy the ThermoAlign results from the Docker container to a folder on your machine. For this you will need the container id and the folder name of the ThermoAlign output. The container id is the id following "root@." in your terminal. For example, if your terminal shows "root@44a8a1fe2bff:", 44a8a1fe2bff is your container id. Command 6 showed us the name of the folder containin the ThermoAlign output
 
-    # Command 7: exit Docker container
+    # Command 7: exit Docker
     exit
 
-    # Command 8: copy output files from the container to your desired local directory.
-    # This command has the following structure
+    # Command 8: copy output files from the container to your desired local directory
+    # This command has the following structure:
     docker cp <containerId>:/TA_codes/<resultfolder> /local/path/target
     
     # Here is an example of the actual command, which needs to be edited to reflect details on your machine.
     docker cp 44a8a1fe2bff:/TA_codes/TA_2016-09-16T16_24_05_130340 /Users/ffx/Documents/ThermoAlign_results
-    # Replace "44a8a1fe2bff" with the docker contaiener id on your machine; 
-    # Replace "TA_2016-09-16T16_24_05_130340" with the directory name of the output folder;
-    # Replace "/Users/ffx/Documents/TA_results" with the path to where you want to copy the output to
+    # replace "44a8a1fe2bff" with the docker contaiener id on your machine; 
+    # replace "TA_2016-09-16T16_24_05_130340" with the directory name of the output folder;
+    # replace "/Users/ffx/Documents/TA_results" with the path to where you want to copy the output to.
 
 <h1 id="docker">
 ThermoAlign is Dockerized
