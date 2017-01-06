@@ -133,7 +133,7 @@ Docker containers may be run in interactive mode:
     
 and then,
     
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_d /bin/bash
+    docker run -t -i drmaize/thermoalign:TA_1.0.0_d bash
     
 Be aware that the available memory for running ThermoAlign should be greater than the combined size of the whole genome and variant files. The number of processors requested (ppn) should match or not exceed the number of threads indicated for BLAST in the parameters.py file.
 
