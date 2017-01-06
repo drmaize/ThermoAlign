@@ -132,9 +132,11 @@ Each output file name will start with the same timestamp.
 ###  _The TRS module:_
 
 An output file with detailed summary statistics from the run:
+
 TA_2016-09-13T09_05_00_545957_run_summary.txt
 
-Variant masked locus sequence in fasta format
+Variant masked locus sequence in fasta format:
+
 TA_2016-09-13T09_05_00_545957_3_33000_2001_VariantMasked.fasta
 
 ###  _The UOD module:_
@@ -163,7 +165,7 @@ TA_2016-09-13T09_05_00_545957_UOD_out3_1.fasta
 
 TA_2016-09-13T09_05_00_545957_UOD_out3_2.fasta
 
-<i>.fasta</i> file of + & - strand primers:
+<i>.fasta</i> file of + and - strand primers:
 
 TA_2016-09-13T09_05_00_545957_UOD_out4_1.fasta
 
@@ -177,7 +179,8 @@ TA_2016-09-13T09_05_00_545957_PSE_out1_1.csv
 
 TA_2016-09-13T09_05_00_545957_PSE_out2_1.csv
 
-<i>.csv</i> file with the Max_misprime_Tm and primer feature information for + and - primers
+<i>.csv</i> file with the Max_misprime_Tm and primer feature information for + and - primers:
+
 TA_2016-09-13T09_05_00_545957_PSE_out3_1.csv
 
 ###  _The PPS module:_
@@ -220,8 +223,4 @@ ThermoAlign can be executed via Python on a local cluster independent of Docker.
 * [networkx    1.11](https://networkx.github.io/)
 
 
-
-
-   
-                                    ##### END OF README #####    
-
+                                    ##### END OF README #####
