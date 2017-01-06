@@ -107,7 +107,6 @@ For optimum performance with large and highly repetitive genomes such as maize, 
 Inputting a custom reference genome for TA_1.0.0_d
 </h1>
 
-### _Input chromosme_
 The reference sequence pseudomolecule of each chromosome needs to be separated into separate files and named as follows: 
 >chr1.fasta, chr2.fasta, etc.
 
@@ -121,7 +120,6 @@ For example:
 Inputting prior variant info for TA_1.0.0_d
 </h1>
 
-###  _Input variant vcf file_ 
 A <i>.vcf</i> file (v4.0 or v4.1) based on the same coordinate system as the reference genome sequence may be optionally used for polymorphism-aware primer design. This will result in the exclusion of candidate primers that co-localize with variant sites.
 
 The <i>.vcf</i> file needs to be separated into separate files for each chromosome and named as follows:
