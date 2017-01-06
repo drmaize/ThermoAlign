@@ -76,7 +76,9 @@ Going Further: ThermoAlign is Dockerized
 
 Note: for optimum performance with large and highly repetitive genomes such as maize, it may be better to run the source code natively, with each of the required dependencies installed on your local machine or cluster. See the end of this readme for a list of the dependencies required for ThermoAlign.
 
-Docker commands are described at https://docs.docker.com/engine/reference/commandline/ and https://sites.google.com/site/felixfranciersite/blogs/docker.
+Further details on Docker commands can be found at the following sites:
+>https://docs.docker.com/engine/reference/commandline/
+>https://sites.google.com/site/felixfranciersite/blogs/docker
 
 
 Inputting a custom reference genome for TA_1.0.0_d
