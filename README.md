@@ -42,24 +42,25 @@ Once you've exited from vim, ThermoAlign can be run.
 
 ![alt tag](https://github.com/drmaize/ThermoAlign/blob/master/images/docker_screen_shot_2.png)
 
-Note your container id. It is the id following "root@." in your terminal. For example, if your terminal shows "root@44a8a1fe2bff:", 44a8a1fe2bff is your container id.
-
-After exiting from a container, the output files may be copied from the container to host.
+    # Command 6: view what's inside of the TA_codes folder, which now includes a folder with the prefix "TA_" followed by some time stamp and job id information. This folder contains all of the output from ThermoAlign.
+    ls
     
-    # Command 6: exit Docker container
+Hopefully it was a success! The output files from each modules are explained <a href="#output">here</a>. If something seems wrong, please feel free to contact <a href="mailto:ffrancis@udel.edu>Felix Francis</a> or <a href="mailto:rjw@udel.edu>Randy Wisser</a>.
+
+The next steps show you how to copy the ThermoAlign results from the Docker container to a folder on your machine. For this you will need the container id and the folder name of the ThermoAlign output. The container id is the id following "root@." in your terminal. For example, if your terminal shows "root@44a8a1fe2bff:", 44a8a1fe2bff is your container id. Command 6 showed us the name of the folder containin the ThermoAlign output
+
+    # Command 7: exit Docker container
     exit
 
-    # Command 7: copy output files from the container to your desired local directory.
+    # Command 8: copy output files from the container to your desired local directory.
     # This command has the following structure
-    docker cp <containerId>:/file/path/within/container /local/path/target
+    docker cp <containerId>:/TA_codes/<resultfolder> /local/path/target
     
-    # Here is an example of the actual command, which needs to be edited a bit to reflect details on your machine
-    docker cp 44a8a1fe2bff:/TA_codes/TA_2016-09-16T16_24_05_130340/ /Users/ffx/Documents/ThermoAlign_results
+    # Here is an example of the actual command, which needs to be edited to reflect details on your machine
+    docker cp 44a8a1fe2bff:/TA_codes/TA_2016-09-16T16_24_05_130340 /Users/ffx/Documents/ThermoAlign_results
     # (i) Replace "44a8a1fe2bff" with the docker contaiener id on your machine; 
-    # (ii) Replace "TA_2016-09-16T16_24_05_130340/" with the directory name of the TA output folder generated after running ThermoAlign;
-    # (iii) Replace "/Users/ffx/Documents/ThermoAlign_results" with the path to the directory you want to copy the output to
-
-The output files from each modules are explained <a href="#output">here</a>.
+    # (ii) Replace "TA_2016-09-16T16_24_05_130340" with the directory name of the output folder;
+    # (iii) Replace "/Users/ffx/Documents/TA_results" with the path to where you want to copy the output to
 
 <h1 id="docker">
 ThermoAlign is Dockerized
