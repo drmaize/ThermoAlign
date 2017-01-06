@@ -47,7 +47,7 @@ Once you've exited from vim, ThermoAlign can be run from the TA_codes directory.
     # The TA-pre-fixed folder contains all of the output from the ThermoAlign run.
     ls
     
-Hopefully the run was a success! The output files from each modules are explained <a href="#output">here</a>. If you are having trouble or something seems wrong, please feel free to contact <a href="mailto:ffrancis@udel.edu>Felix Francis</a> or <a href="mailto:rjw@udel.edu>Randy Wisser</a>.
+Hopefully the run was a success! The output files from each modules are explained <a href="#output">here</a>. If you are having trouble or something seems wrong, please feel free to contact <a href="mailto:ffrancis@udel.edu">Felix Francis</a> or <a href="mailto:rjw@udel.edu">Randy Wisser</a>.
 
 The next steps show you how to copy the ThermoAlign results from the Docker container to a folder on your machine. For this you will need the container id and the folder name of the ThermoAlign output. The container id is the id following "root@." in your terminal. For example, if your terminal shows "root@44a8a1fe2bff:", 44a8a1fe2bff is your container id. Command 6 showed us the name of the folder containin the ThermoAlign output
 
