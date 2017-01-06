@@ -35,7 +35,7 @@ Standard default parameters are preset, but users can modify the parameters.py f
     # type "i" to insert/modify values; use the "Esc" keyboard button followed by ":x" to save and quit.
     vim parameters.py
     
-Once you've exited from vim, ThermoAlign can be run.
+Once you've exited from vim, ThermoAlign can be run from the TA_codes directory.
     
     # Command 5: run ThermoAlign
     ./pipeline.sh
