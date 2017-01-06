@@ -74,7 +74,7 @@ Going Further: ThermoAlign is Dockerized
 * TA_1.0.0_d is a general distributable version which requires user supplied files (reference sequence and variant data)
 * TA_1.0.0_Zm3 is a maize-ready version containing all components required for running ThermoAlign as described by Francis et al. #######.
 
-TA_1.0.0_d is the version most users will probably want, which requires inputting of the reference genome and (opriotnally) prior variant information.
+TA_1.0.0_d is the version most users will probably want, which requires inputting of the <a href="#refgenome">reference genome</a> and (opriotnally) <a href="#variants">variant data</a>. This is described below.
 
 ###  _Opening an existing container_
 
@@ -103,9 +103,10 @@ Further details on Docker commands can be found at the following sites:
 
 For optimum performance with large and highly repetitive genomes such as maize, it may be better to run the source code natively, with each of the required dependencies installed on your local machine or cluster. See the end of this readme for a list of the dependencies required to run ThermoAlign natively.
 
-
+<h1 id="refgenome">
 Inputting a custom reference genome for TA_1.0.0_d
-================================================
+</h1>
+
 ### _Input chromosme_
 The reference sequence for each chromosome needs to be separated into separate files and named as follows: 
 chr1.fasta, chr2.fasta, etc.
@@ -116,9 +117,9 @@ For each sequence, the fasta header should be of the following format:
 For example:
 > &#62;chromosome:AGPv3:13:1:7261561:1
 
-
+<h1 id="variants">
 Inputting prior variant info for TA_1.0.0_d
-================================================
+</h1>
 ###  _Input variant vcf file_ 
 A vcf file (v4.0 or v4.1) based on the same coordinate system of the reference genome sequence may be optionally used for polymorphism-aware primer design. This will result in the exclusion of candidate primers that co-localize with variant sites.
 
