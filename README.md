@@ -78,7 +78,7 @@ Note: for optimum performance with large and highly repetitive genomes such as m
 Docker commands are described at https://docs.docker.com/engine/reference/commandline/ and https://sites.google.com/site/felixfranciersite/blogs/docker.
 
 
-Using your desired reference genome for TA_1.0.0_d
+Using your desired reference genome with TA_1.0.0_d
 ================================================
 ### _Input chromosme_
 The reference sequence for each chromosome needs to be separated into separate files and named as follows: 
@@ -91,7 +91,7 @@ For example:
 >chromosome:AGPv3:13:1:7261561:1
 
 
-Using your desired reference genome for TA_1.0.0_d
+Using your desired reference genome with TA_1.0.0_d
 ================================================
 ###  _Input variant vcf file_ 
 A vcf file (v4.0 or v4.1) based on the same coordinate system of the reference genome sequence may be optionally used for polymorphism-aware primer design
