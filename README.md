@@ -67,13 +67,13 @@ The next steps show you how to copy the ThermoAlign results from the Docker cont
 <h1 id="docker">
 ThermoAlign is Dockerized
 </h1>
-Docker is an efficient way to port ThermoAlign across systems and operating systems. The following docker images facilitate deployment of ThermoAlign without the user needing to install any of its components.
+<a href="https://www.docker.com/">Docker</a> is an efficient way to port ThermoAlign across systems and operating systems. The following docker images are available for deployment of ThermoAlign.
 
 * (i) TA_1.0.0_s is a sample run version containing a small set of sample files that can be used to test ThermoAlign
-* (ii) TA_1.0.0_d is a general distributable version which requires user supplied files
+* (ii) TA_1.0.0_d is a general distributable version which requires user supplied files (reference sequence and variant data)
 * (iii) TA_1.0.0_Zm3 is a maize-ready version containing all components required for running ThermoAlign as described by Francis et al. #######.
 
-Note: for optimum performance with large and highly repetitive genomes such as the maize genome, it may be better to run the source code natively, with each of the required dependencies installed on your local machine or cluster. 
+Note: for optimum performance with large and highly repetitive genomes such as maize, it may be better to run the source code natively, with each of the required dependencies installed on your local machine or cluster. 
 
 Installing Docker
 ================================================
@@ -81,7 +81,7 @@ Docker installation can be done by visiting the official Docker installation pag
 
 Docker commands are described at https://sites.google.com/site/felixfranciersite/blogs/docker or https://docs.docker.com/engine/reference/commandline/.
 
-Three docker images available:
+Three docker images are available:
 
     # Option 1: container with a sample genome and sample polymorphism file, for quick testing of ThermoAlign
     docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash
@@ -94,31 +94,32 @@ Three docker images available:
     
 On a cluster using the qsub batch manager, Docker containers may be run in interactive mode:
     
-    qsub -I -V -N intrctv -l nodes=biomix17:ppn=5
+    qsub -I -V -N intrctv -l nodes=1:ppn=5
     
 and then,
     
     docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash
     
-Be aware that the available memory for running these docker containers should be greater than the combined size of the whole genome and variant files.
-
+Be aware that the available memory for running these docker containers should be greater than the combined size of the whole genome and variant files. The number of processors requested (ppn) should match or not exceed the number of threads requested for BLAST in the parameters.py file.
 
 Format for external whole genome and variant files:
 ================================================
 
 ### _Input chromosme_
-The chromosome files should be named as             :   chr1.fasta, chr2.fasta etc
+The reference sequence for each chromosome needs to be separated into separate files and named as follows: 
+chr1.fasta, chr2.fasta etc
 
-The fasta header should be of the following format  :   >chromosome:assembly_ver:chr#:start_pos:end_pos:#sequences
+For each sequence, the fasta header should be of the following format:
+>chromosome:assembly_ver:chr#:start_pos:end_pos:#sequences
 
-Example                                             :   >chromosome:AGPv3:13:1:7261561:1
-
+For example:
+>chromosome:AGPv3:13:1:7261561:1
 
 ###  _Input variant vcf file_ 
-The variant vcf files should be named as            :   chr1.vcf, chr2.vcf etc
+A vcf file (v4.0 or v4.1) based on the same coordinate system of the reference genome sequence may be optionally used for polymorphism-aware primer design
 
-vcf format (1000 genomes project format)            :   A vcf file (v4.0 or v4.1) based on the same coordinate system of the reference genome sequence may be optionally used for polymorphism-aware primer design
-
+The variant vcf files for each chromosome needs to be separated into separate files and named as follows:
+chr1.vcf, chr2.vcf etc
 
 <h1 id="output">
 Output Files
