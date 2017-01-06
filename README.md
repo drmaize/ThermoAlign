@@ -107,7 +107,7 @@ Format for external whole genome and variant files:
 
 ### _Input chromosme_
 The reference sequence for each chromosome needs to be separated into separate files and named as follows: 
-chr1.fasta, chr2.fasta etc
+chr1.fasta, chr2.fasta etc. A fasta file should only contain a single sequence.
 
 For each sequence, the fasta header should be of the following format:
 >chromosome:assembly_ver:chr#:start_pos:end_pos:#sequences
