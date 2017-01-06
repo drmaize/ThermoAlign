@@ -77,37 +77,12 @@ Note: for optimum performance with large and highly repetitive genomes such as m
 
 Docker commands are described at https://docs.docker.com/engine/reference/commandline/ and https://sites.google.com/site/felixfranciersite/blogs/docker.
 
-Setting up the reference genome in TA_1.0.0_d
+
+Using your desired reference genome for TA_1.0.0_d
 ================================================
-
-
-Three docker images are available:
-
-    # Option 1: container with a sample genome and sample polymorphism file, for quick testing of ThermoAlign
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash
-                            
-    # Option 2: container without any reference genome or polymorphism file (user needs to supply these files)
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_d /bin/bash
-                      
-    # Option 3: maize-ready version
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_Zm3 /bin/bash
-    
-On a cluster using the qsub batch manager, Docker containers may be run in interactive mode:
-    
-    qsub -I -V -N intrctv -l nodes=1:ppn=5
-    
-and then,
-    
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_s /bin/bash
-    
-Be aware that the available memory for running these docker containers should be greater than the combined size of the whole genome and variant files. The number of processors requested (ppn) should match or not exceed the number of threads requested for BLAST in the parameters.py file.
-
-Format for external whole genome and variant files:
-================================================
-
 ### _Input chromosme_
 The reference sequence for each chromosome needs to be separated into separate files and named as follows: 
-chr1.fasta, chr2.fasta etc. A fasta file should only contain a single sequence.
+chr1.fasta, chr2.fasta etc
 
 For each sequence, the fasta header should be of the following format:
 >chromosome:assembly_ver:chr#:start_pos:end_pos:#sequences
@@ -115,11 +90,28 @@ For each sequence, the fasta header should be of the following format:
 For example:
 >chromosome:AGPv3:13:1:7261561:1
 
+
+Using your desired reference genome for TA_1.0.0_d
+================================================
 ###  _Input variant vcf file_ 
 A vcf file (v4.0 or v4.1) based on the same coordinate system of the reference genome sequence may be optionally used for polymorphism-aware primer design
 
 The variant vcf files for each chromosome needs to be separated into separate files and named as follows:
 chr1.vcf, chr2.vcf etc
+
+
+Running on a cluster with qsub
+================================================
+    
+Docker containers may be run in interactive mode:
+    
+    qsub -I -V -N intrctv -l nodes=1:ppn=5
+    
+and then,
+    
+    docker run -t -i drmaize/thermoalign:TA_1.0.0_d /bin/bash
+    
+Be aware that the available memory for running ThermoAlign should be greater than the combined size of the whole genome and variant files. The number of processors requested (ppn) should match or not exceed the number of threads indicated for BLAST in the parameters.py file.
 
 <h1 id="output">
 Output Files
@@ -221,6 +213,7 @@ ThermoAlign can be executed via Python on a local cluster independent of Docker.
 * [BLAST   2.2.31+](http://blast.ncbi.nlm.nih.gov/Blast.cgi)
 * [MultiPLX    2.0](http://bioinfo.ut.ee/download/dl.php?file=24)
 * [networkx    1.11](https://networkx.github.io/)
+
 
 
                                     ##### END OF README #####
