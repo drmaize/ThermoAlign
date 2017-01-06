@@ -103,14 +103,16 @@ Further details on Docker commands can be found at the following sites:
 
 For optimum performance with large and highly repetitive genomes such as maize, it may be better to run the source code natively, with each of the required dependencies installed on your local machine or cluster. See the end of this readme for a list of the dependencies required to run ThermoAlign natively.
 
+Be aware that the available memory for running ThermoAlign should be greater than the combined size of the whole genome and variant files. The number of processors requested (ppn) should match or not exceed the number of threads indicated for BLAST in the parameters.py file.
+
 <h1 id="refgenome">
 Inputting a custom reference genome for TA_1.0.0_d
 </h1>
 
-The reference sequence pseudomolecule of each chromosome needs to be separated into separate files and named as follows: 
+The reference sequence pseudomolecule of each chromosome needs to be separated into separate files, named as follows: 
 >chr1.fasta, chr2.fasta, etc.
 
-For each sequence, the fasta header should be of the following format:
+For each sequence, the fasta header should have the following format:
 > &#62;chromosome:assembly_ver:chr#:start_pos:end_pos:#sequences
 
 For example:
@@ -122,22 +124,8 @@ Inputting prior variant info for TA_1.0.0_d
 
 A <i>.vcf</i> file (v4.0 or v4.1) based on the same coordinate system as the reference genome sequence may be optionally used for polymorphism-aware primer design. This will result in the exclusion of candidate primers that co-localize with variant sites.
 
-The <i>.vcf</i> file needs to be separated into separate files for each chromosome and named as follows:
+The <i>.vcf</i> file needs to be separated into separate files for each chromosome, named as follows:
 >chr1.vcf, chr2.vcf, etc.
-
-
-Running on a cluster with qsub
-================================================
-    
-Docker containers may be run in interactive mode:
-    
-    qsub -I -V -N intrctv -l nodes=1:ppn=5
-    
-and then,
-    
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_d bash
-    
-Be aware that the available memory for running ThermoAlign should be greater than the combined size of the whole genome and variant files. The number of processors requested (ppn) should match or not exceed the number of threads indicated for BLAST in the parameters.py file.
 
 <h1 id="output">
 Output Files
@@ -230,6 +218,8 @@ Non-overlapping primer pair combinations from minimal tiling paths. These are us
 
 Advanced Use
 ================================================
+# _Dependencies for ThermoAlign_ 
+
 ThermoAlign can be executed via Python on a local cluster independent of Docker. This requires installation of the following components. The versions listed are those distributed in the Docker container. Newer versions of these components have not been tested with ThermoAlign.
 * Linux/Unix
 * <a href="http://python.org/">Python 2.7</a>
@@ -240,6 +230,16 @@ ThermoAlign can be executed via Python on a local cluster independent of Docker.
 * <a href="http://blast.ncbi.nlm.nih.gov/Blast.cgi">BLAST 2.2.31+</a>
 * <a href="http://bioinfo.ut.ee/download/dl.php?file=24">MultiPLX 2.0</a>
 * <a href="https://networkx.github.io/">networkx 1.11</a>
+
+# _Running on a cluster with qsub_    
+
+Docker containers may be run in interactive mode:
+    
+    qsub -I -V -N intrctv -l nodes=1:ppn=5
+    
+and then,
+    
+    docker run -t -i drmaize/thermoalign:TA_1.0.0_d bash
 
 
 
