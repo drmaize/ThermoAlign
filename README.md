@@ -123,83 +123,84 @@ Each output file name will start with the same timestamp.
 
 ###  _The TRS module:_
 
-An output file with detailed summary statistics from the run:
+Output file with detailed summary statistics from the run:
 
-TA_2016-09-13T09_05_00_545957_run_summary.txt
+>TA_2016-09-13T09_05_00_545957_run_summary.txt
 
-Variant masked locus sequence in fasta format:
+Sequence in fasta format with masked variant sites:
 
-TA_2016-09-13T09_05_00_545957_3_33000_2001_VariantMasked.fasta
+>TA_2016-09-13T09_05_00_545957_3_33000_2001_VariantMasked.fasta
 
 ###  _The UOD module:_
 
-All possible primers (+ and -strands) for the given UOD paramters (.fasta format):
+<i>.fasta</i> file of all possible primers (+ and - strands) for the given UOD paramters:
 
-TA_2016-09-13T09_05_00_545957_UOD_out1_1.fasta
+>TA_2016-09-13T09_05_00_545957_UOD_out1_1.fasta
 
-All possible primers (+ and -strands) for the given UOD paramters (.txt format):
+<i>.txt</i> file of all possible primers (+ and - strands) for the given UOD paramters:
 
-TA_2016-09-13T09_05_00_545957_UOD_out1_2.txt
+>TA_2016-09-13T09_05_00_545957_UOD_out1_2.txt
 
 <i>.fasta</i> file of + strand primers:
 
-TA_2016-09-13T09_05_00_545957_UOD_out2_1.fasta
+>TA_2016-09-13T09_05_00_545957_UOD_out2_1.fasta
 
 <i>.fasta</i> file of - strand primers:
 
-TA_2016-09-13T09_05_00_545957_UOD_out2_2.fasta
+>TA_2016-09-13T09_05_00_545957_UOD_out2_2.fasta
 
 <i>.fasta</i> file of + strand primers, with primer location, length and Tm information:
 
-TA_2016-09-13T09_05_00_545957_UOD_out3_1.fasta
+>TA_2016-09-13T09_05_00_545957_UOD_out3_1.fasta
 
 <i>.fasta</i> file of - strand primers, with primer location, length and Tm information:
 
-TA_2016-09-13T09_05_00_545957_UOD_out3_2.fasta
+>TA_2016-09-13T09_05_00_545957_UOD_out3_2.fasta
 
 <i>.fasta</i> file of + and - strand primers:
 
-TA_2016-09-13T09_05_00_545957_UOD_out4_1.fasta
+>TA_2016-09-13T09_05_00_545957_UOD_out4_1.fasta
 
 ###  _The PSE module:_
 
-<i>.csv</i> file with all possible thermoalignment information for + strand primers:
+<i>.csv</i> file with thermoalignment information for + strand primers:
 
-TA_2016-09-13T09_05_00_545957_PSE_out1_1.csv
+>TA_2016-09-13T09_05_00_545957_PSE_out1_1.csv
 
-<i>.csv</i> file with all possible thermoalignment information for - strand primers
+<i>.csv</i> file with thermoalignment information for - strand primers
 
-TA_2016-09-13T09_05_00_545957_PSE_out2_1.csv
+>TA_2016-09-13T09_05_00_545957_PSE_out2_1.csv
 
-<i>.csv</i> file with the Max_misprime_Tm and primer feature information for + and - primers:
+<i>.csv</i> file with the Max_misprime_Tm and primer feature information for + and - strand primers:
 
-TA_2016-09-13T09_05_00_545957_PSE_out3_1.csv
+>TA_2016-09-13T09_05_00_545957_PSE_out3_1.csv
 
 ###  _The PPS module:_
 
-<i>.txt</i> file containing all possible primer pairs for the user defined parameters and their relevant information:
+<i>.txt</i> file of all possible primer pairs for the user defined parameters and their relevant information:
 
-TA_2016-09-13T09_05_00_545957_primer_pairs_info.txt
+>TA_2016-09-13T09_05_00_545957_primer_pairs_info.txt
 
 Primer names, sequences and their Tm for ordering:
 
-TA_2016-09-13T09_05_00_545957_primer_pairs_order.txt
+>TA_2016-09-13T09_05_00_545957_primer_pairs_order.txt
 
-contains the non-overlapping primer pair combinations from minimal tiling paths. These are used for checking multiplex compatibility:
+Non-overlapping primer pair combinations from minimal tiling paths. These are used to check multiplex compatibility:
 
-TA_2016-09-13T09_05_00_545957_multiplx_input_set1_1.txt, TA_2016-09-13T09_05_00_545957_multiplx_input_set2_1.txt 
+>TA_2016-09-13T09_05_00_545957_multiplx_input_set1_1.txt
+>TA_2016-09-13T09_05_00_545957_multiplx_input_set2_1.txt 
 
 <i>.txt</i> file listing names of multiplex compatible groups
 
-TA_2016-09-13T09_05_00_545957_multiplex_groups_set1_1.txt, TA_2016-09-13T09_05_00_545957_multiplex_groups_set2_1.txt
+>TA_2016-09-13T09_05_00_545957_multiplex_groups_set1_1.txt, TA_2016-09-13T09_05_00_545957_multiplex_groups_set2_1.txt
 
 <i>.bed</i> formatted files of the primers for further analysis and visualization:
 
-TA_2016-09-13T09_05_00_545957_bed_separate_tracks_selected_oligos.bed
+>TA_2016-09-13T09_05_00_545957_bed_separate_tracks_selected_oligos.bed
 
 <i>.txt</i> file with the list of primer pairs grouped as multiplex compatible sets. All primers in each set may be used in a single reaction:
 
-TA_2016-09-13T09_05_00_545957_multiplx_pooled_output.txt
+>TA_2016-09-13T09_05_00_545957_multiplx_pooled_output.txt
 
 Advanced Use
 ================================================
