@@ -65,7 +65,7 @@ The next steps show you how to copy the ThermoAlign results from the Docker cont
     # replace "TA_2016-09-16T16_24_05_130340" with the directory name of the output folder;
     # replace "/Users/ffx/Documents/TA_results" with the path to where you want to copy the output to.
 
-<h1 id="#dockerized">
+<h1 id="dockerized">
 Going Further: ThermoAlign is Dockerized
 </h1>
 <a href="https://www.docker.com/">Docker</a> is an efficient way to port ThermoAlign across systems and operating systems. If you stepped through the above use case you already have a good idea on how to use ThermoAlign. The following docker images are available for deployment. TA_1.0.0_d is the version most users will probably want.
