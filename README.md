@@ -22,7 +22,7 @@ TA_1.0.0_s is a Docker image containing a small set of sample files that can be 
 
 ![alt tag](https://github.com/drmaize/ThermoAlign/blob/master/images/docker_screen_shot.png)
 
-This will pull TA_1.0.0_s from docker hub, generate a new ThermoAlign container in your local machine and open the container where commands can be executed. If the image is already present in your local system and you run the same command, Docker will create a new container. Re-entering an existing container is described in the section below called <a href="#dockerized">"Going Furhther: ThermoAlign is Dockerized."</a>
+This will pull TA_1.0.0_s from docker hub, generate a new ThermoAlign container in your local machine and open the container where commands can be executed. If the image is already present in your local system and you run the same command, Docker will create a new container. Re-entering an existing container is described in the section below called <a href="#dockerized">Going Furhther: ThermoAlign is Dockerized</a>.
 
     # Command 2: move to TA_codes directory
     cd TA_codes/
