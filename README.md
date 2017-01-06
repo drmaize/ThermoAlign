@@ -6,14 +6,15 @@ Licensing and access
 ================================================
 * ThermoAlign is released under a GNU GPLv3 open source license. 
 * The source code is available on GitHub: https://github.com/drmaize/ThermoAlign/tree/master/TA_codes
-* No need to install the dependencies; Docker images can be accessed to run ThermoAlign on any platform (see: <a href="#docker">below</a>)
+* No need to install the dependencies; Docker images can be accessed to run ThermoAlign on any platform (see: <a href="#docker">runcase</a>)
 * Run parameters are defined in a parameters.py file: https://github.com/drmaize/ThermoAlign/blob/master/TA_codes/parameters.py
 * A shell script can be used to run all components: https://github.com/drmaize/ThermoAlign/blob/master/TA_codes/pipeline.sh
 * Alternatively, each component of ThermoAlign can be run separately in the following order:
 1) TRS.py; 2) UOD.py; 3) PSE.py; 4) PPS.py
 
-Simple Run Case for a ThermoAlign Docker Image
-================================================
+<h1 id="runcase">
+Introductory Run Case for a ThermoAlign Docker Image
+</h1>
 TA_1.0.0_s is a Docker image containing a small set of sample files that can be used to test ThermoAlign. First, you must install <a href="https://docs.docker.com/engine/installation/">Docker</a> on your machine. Once Docker is installed, follow commands 1-8 below to run ThermoAlign.
 
     # Command 1:
@@ -64,9 +65,9 @@ The next steps show you how to copy the ThermoAlign results from the Docker cont
     # replace "TA_2016-09-16T16_24_05_130340" with the directory name of the output folder;
     # replace "/Users/ffx/Documents/TA_results" with the path to where you want to copy the output to.
 
-<h1 id="docker">
+
 Going Further: ThermoAlign is Dockerized
-</h1>
+================================================
 <a href="https://www.docker.com/">Docker</a> is an efficient way to port ThermoAlign across systems and operating systems. If you stepped through the above use case you already have a good idea on how to use ThermoAlign. The following docker images are available for deployment. TA_1.0.0_d is the version most users will probably want.
 
 * TA_1.0.0_s is a sample run version containing a small set of sample files that can be used to test ThermoAlign
@@ -78,11 +79,11 @@ Note: for optimum performance with large and highly repetitive genomes such as m
 Docker commands are described at https://docs.docker.com/engine/reference/commandline/ and https://sites.google.com/site/felixfranciersite/blogs/docker.
 
 
-Using your desired reference genome with TA_1.0.0_d
+Inputting a custom reference genome for TA_1.0.0_d
 ================================================
 ### _Input chromosme_
 The reference sequence for each chromosome needs to be separated into separate files and named as follows: 
-chr1.fasta, chr2.fasta etc
+chr1.fasta, chr2.fasta, etc.
 
 For each sequence, the fasta header should be of the following format:
 > &#62;chromosome:assembly_ver:chr#:start_pos:end_pos:#sequences
@@ -91,13 +92,13 @@ For example:
 > &#62;chromosome:AGPv3:13:1:7261561:1
 
 
-Using your desired reference genome with TA_1.0.0_d
+Inputting prior variant info for TA_1.0.0_d
 ================================================
 ###  _Input variant vcf file_ 
-A vcf file (v4.0 or v4.1) based on the same coordinate system of the reference genome sequence may be optionally used for polymorphism-aware primer design
+A vcf file (v4.0 or v4.1) based on the same coordinate system of the reference genome sequence may be optionally used for polymorphism-aware primer design. This will result in the exclusion of candidate primers that co-localize with variant sites.
 
 The variant vcf files for each chromosome needs to be separated into separate files and named as follows:
-chr1.vcf, chr2.vcf etc
+chr1.vcf, chr2.vcf, etc.
 
 
 Running on a cluster with qsub
