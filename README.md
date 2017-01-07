@@ -241,5 +241,5 @@ and then,
     
     docker run -t -i drmaize/thermoalign:TA_1.0.0_d bash
 
-<br>
+</br>
                                     ##### END OF README #####
