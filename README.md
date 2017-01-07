@@ -65,68 +65,6 @@ The next steps show you how to copy the ThermoAlign results from the Docker cont
     # replace "TA_2016-09-16T16_24_05_130340" with the directory name of the output folder;
     # replace "/Users/ffx/Documents/TA_results" with the path to where you want to copy the output to.
 
-<h1 id="dockerized">
-Going Further: ThermoAlign is Dockerized
-</h1>
-<a href="https://www.docker.com/">Docker</a> is an efficient way to port ThermoAlign across systems and operating systems. If you stepped through the above use case you already have a good idea on how to use ThermoAlign. The following docker images are available for deployment.
-
-* TA_1.0.0_s is a sample run version containing a small set of sample files that can be used to test ThermoAlign
-* TA_1.0.0_d is a general distributable version which requires user supplied files (reference sequence and variant data)
-* TA_1.0.0_Zm3 is a maize-ready version containing all components required for running ThermoAlign as described by Francis et al. #######.
-
-TA_1.0.0_d is the version most users will probably want, which requires inputting of the <a href="#refgenome">reference genome</a> and (opriotnally) <a href="#variants">variant data</a>. This is described below.
-
-###  _Opening an existing container_
-
-Containers existing on your machine are in either an open or closed state. This can be determined with the following command:
-
-    # the -a flag will list all (open and closed) containers
-    docker ps -a
-    
-If the container is in an open state (does not say "exited" in the status column), use the following command with the desired container id specified:
-
-    docker exec -it <container_id> bash
-    
-If the container is in an exited status, use the following command with the desired container id specified:
-
-    docker start <container_id>
-    
-    # followed by 
-    
-    docker exec -it <container_id> bash
-
-Further details on Docker commands can be found at the following sites:
->https://docs.docker.com/engine/reference/commandline/
->https://sites.google.com/site/felixfranciersite/blogs/docker
-
-###  _Running ThermoAlign natively_
-
-For optimum performance with large and highly repetitive genomes such as maize, it may be better to run the source code natively, with each of the required dependencies installed on your local machine or cluster. See the end of this readme for a list of the dependencies required to run ThermoAlign natively.
-
-Be aware that the available memory for running ThermoAlign should be greater than the combined size of the whole genome and variant files. The number of processors requested (ppn) should match or not exceed the number of threads indicated for BLAST in the parameters.py file.
-
-<h1 id="refgenome">
-Inputting a custom reference genome for TA_1.0.0_d
-</h1>
-
-The reference sequence pseudomolecule of each chromosome needs to be separated into separate files, named as follows: 
->chr1.fasta, chr2.fasta, etc.
-
-For each sequence, the fasta header should have the following format:
-> &#62;chromosome:assembly_ver:chr#:start_pos:end_pos:#sequences
-
-For example:
-> &#62;chromosome:AGPv3:13:1:7261561:1
-
-<h1 id="variants">
-Inputting prior variant info for TA_1.0.0_d
-</h1>
-
-A <i>.vcf</i> file (v4.0 or v4.1) based on the same coordinate system as the reference genome sequence may be optionally used for polymorphism-aware primer design. This will result in the exclusion of candidate primers that co-localize with variant sites.
-
-The <i>.vcf</i> file needs to be provided as separate files for each chromosome, named as follows:
->chr1.vcf, chr2.vcf, etc.
-
 <h1 id="output">
 Output Files
 </h1>
@@ -215,6 +153,70 @@ Non-overlapping primer pair combinations from minimal tiling paths. These are us
 <i>.txt</i> file with the list of primer pairs grouped as multiplex compatible sets. All primers in each set may be used in a single reaction:
 
 >TA_2016-09-13T09_05_00_545957_multiplx_pooled_output.txt
+
+
+<h1 id="dockerized">
+Going Further: ThermoAlign is Dockerized
+</h1>
+<a href="https://www.docker.com/">Docker</a> is an efficient way to port ThermoAlign across systems and operating systems. If you stepped through the above use case you already have a good idea on how to use ThermoAlign. The following docker images are available for deployment.
+
+* TA_1.0.0_s is a sample run version containing a small set of sample files that can be used to test ThermoAlign
+* TA_1.0.0_d is a general distributable version which requires user supplied files (reference sequence and variant data)
+* TA_1.0.0_Zm3 is a maize-ready version containing all components required for running ThermoAlign as described by Francis et al. #######.
+
+TA_1.0.0_d is the version most users will probably want, which requires inputting of the <a href="#refgenome">reference genome</a> and (opriotnally) <a href="#variants">variant data</a>. This is described below.
+
+###  _Opening an existing container_
+
+Containers existing on your machine are in either an open or closed state. This can be determined with the following command:
+
+    # the -a flag will list all (open and closed) containers
+    docker ps -a
+    
+If the container is in an open state (does not say "exited" in the status column), use the following command with the desired container id specified:
+
+    docker exec -it <container_id> bash
+    
+If the container is in an exited status, use the following command with the desired container id specified:
+
+    docker start <container_id>
+    
+    # followed by 
+    
+    docker exec -it <container_id> bash
+
+Further details on Docker commands can be found at the following sites:
+>https://docs.docker.com/engine/reference/commandline/
+>https://sites.google.com/site/felixfranciersite/blogs/docker
+
+###  _Running ThermoAlign natively_
+
+For optimum performance with large and highly repetitive genomes such as maize, it may be better to run the source code natively, with each of the required dependencies installed on your local machine or cluster. See the end of this readme for a list of the dependencies required to run ThermoAlign natively.
+
+Be aware that the available memory for running ThermoAlign should be greater than the combined size of the whole genome and variant files. The number of processors requested (ppn) should match or not exceed the number of threads indicated for BLAST in the parameters.py file.
+
+<h1 id="refgenome">
+Inputting a custom reference genome for TA_1.0.0_d
+</h1>
+
+The reference sequence pseudomolecule of each chromosome needs to be separated into separate files, named as follows: 
+>chr1.fasta, chr2.fasta, etc.
+
+For each sequence, the fasta header should have the following format:
+> &#62;chromosome:assembly_ver:chr#:start_pos:end_pos:#sequences
+
+For example:
+> &#62;chromosome:AGPv3:13:1:7261561:1
+
+<h1 id="variants">
+Inputting prior variant info for TA_1.0.0_d
+</h1>
+
+A <i>.vcf</i> file (v4.0 or v4.1) based on the same coordinate system as the reference genome sequence may be optionally used for polymorphism-aware primer design. This will result in the exclusion of candidate primers that co-localize with variant sites.
+
+The <i>.vcf</i> file needs to be provided as separate files for each chromosome, named as follows:
+>chr1.vcf, chr2.vcf, etc.
+
 
 Advanced Use
 ================================================
