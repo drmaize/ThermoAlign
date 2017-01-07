@@ -62,8 +62,8 @@ The next steps show you how to copy the ThermoAlign results from the Docker cont
     # Here is an example of the actual command, which needs to be edited to reflect details on your machine.
     docker cp 44a8a1fe2bff:/TA_codes/TA_2016-09-16T16_24_05_130340 /Users/ffx/Documents/ThermoAlign_results
     # replace "44a8a1fe2bff" with the docker contaiener id on your machine; 
-    # replace "TA_2016-09-16T16_24_05_130340" with the directory name of the output folder;
-    # replace "/Users/ffx/Documents/TA_results" with the path to where you want to copy the output to.
+    # replace "TA_2016-09-16T16_24_05_130340" with the directory name of the output folder in the container;
+    # replace "/Users/ffx/Documents/TA_results" with the local path where you want to copy the output to.
 
 <h1 id="output">
 Output Files
