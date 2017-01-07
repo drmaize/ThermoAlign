@@ -220,7 +220,7 @@ Advanced Use
 ================================================
 ### _Dependencies for ThermoAlign_ 
 
-ThermoAlign can be executed via Python on a local cluster independent of Docker. This requires installation of the following components. The versions listed are those distributed in the Docker container. Newer versions of these components have not been tested with ThermoAlign.
+ThermoAlign can be executed via Python on a local cluster independent of Docker. This requires installation of the following components. The versions listed are those distributed in the Docker container. Other versions of these components have not been tested.
 * Linux/Unix
 * <a href="http://python.org/">Python 2.7</a>
 * <a href="http://www.numpy.org/">NumPy 1.9.2</a>
