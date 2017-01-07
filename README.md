@@ -218,7 +218,7 @@ The <i>.vcf</i> file needs to be provided as separate files for each chromosome,
 
 Advanced Use
 ================================================
-# _Dependencies for ThermoAlign_ 
+### _Dependencies for ThermoAlign_ 
 
 ThermoAlign can be executed via Python on a local cluster independent of Docker. This requires installation of the following components. The versions listed are those distributed in the Docker container. Newer versions of these components have not been tested with ThermoAlign.
 * Linux/Unix
@@ -231,7 +231,7 @@ ThermoAlign can be executed via Python on a local cluster independent of Docker.
 * <a href="http://bioinfo.ut.ee/download/dl.php?file=24">MultiPLX 2.0</a>
 * <a href="https://networkx.github.io/">networkx 1.11</a>
 
-# _Running on a cluster with qsub_    
+### _Running on a cluster with qsub_    
 
 Docker containers may be run in interactive mode:
     
@@ -241,5 +241,6 @@ and then,
     
     docker run -t -i drmaize/thermoalign:TA_1.0.0_d bash
 
+<br>
 
                                         ##### END OF README #####
