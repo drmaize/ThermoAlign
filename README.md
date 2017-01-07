@@ -58,12 +58,12 @@ The next steps show you how to copy the ThermoAlign results from the Docker cont
     exit
 
     # Command 8: copy output files from the container to your desired local directory
-    # This command has the following structure:
-    docker cp <containerId>:/TA_codes/<resultfolder> /local/path/target
+    # This command has the following structure; the name or container ID can be used
+    docker cp <name|containerId>:/TA_codes/<resultfolder> /local/path/target
     
-    # Here is an example of the actual command, which needs to be edited to reflect details on your machine.
-    docker cp 44a8a1fe2bff:/TA_codes/TA_2016-09-16T16_24_05_130340 /Users/ffx/Documents/ThermoAlign_results
-    # replace "44a8a1fe2bff" with the docker container id on your machine; 
+    # Here is an example of the actual command, which needs to be edited to reflect details on your machine. 
+    docker cp thermoalign_test:/TA_codes/TA_2016-09-16T16_24_05_130340 /Users/ffx/Documents/ThermoAlign_results
+    # replace "thermoalign_test" with either the unique name you used for --name or the docker container id on your machine; 
     # replace "TA_2016-09-16T16_24_05_130340" with the directory name of the output folder in the container;
     # replace "/Users/ffx/Documents/TA_results" with the local path where you want to copy the output to.
 
