@@ -69,9 +69,7 @@ The next steps show you how to copy the ThermoAlign results from the Docker cont
 Output Files
 </h1>
 
-All output files will be saved in a directory named based on the timestamp of TA_year-month-date-time format (for example :TA_2016-09-13T09_05_00_545957).
-
-Each output file name will start with the same timestamp. 
+All output files will be saved in a directory named based on the timestamp of TA_year-month-date-time format (for example :TA_2016-09-13T09_05_00_545957). Each output file name will start with the same timestamp. 
 
 ###  _The TRS module:_
 
