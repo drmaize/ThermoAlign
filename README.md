@@ -124,7 +124,7 @@ Inputting prior variant info for TA_1.0.0_d
 
 A <i>.vcf</i> file (v4.0 or v4.1) based on the same coordinate system as the reference genome sequence may be optionally used for polymorphism-aware primer design. This will result in the exclusion of candidate primers that co-localize with variant sites.
 
-The <i>.vcf</i> file needs to be separated into separate files for each chromosome, named as follows:
+The <i>.vcf</i> file needs to be provided as separate files for each chromosome, named as follows:
 >chr1.vcf, chr2.vcf, etc.
 
 <h1 id="output">
