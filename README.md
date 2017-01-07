@@ -186,7 +186,10 @@ If the container is in an exited status, use the following command with the desi
     docker exec -it <name|container_id> bash
 
 A container may be deleted using the name or container ID:
-
+    
+    # if the container is open it needs to be closed first
+    docker stop <name|container_id>
+    # now it can be deleted
     docker rm <name|container_id>
 
 Further details on Docker commands can be found at the following sites:
