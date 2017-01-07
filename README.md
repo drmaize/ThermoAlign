@@ -20,11 +20,11 @@ Introductory Run Case for a ThermoAlign Docker Image
 TA_1.0.0_s is a Docker image containing a small set of sample files that can be used to test ThermoAlign. First, you must install <a href="https://docs.docker.com/engine/installation/">Docker</a> on your machine. Once Docker is installed, follow commands 1-8 below to run ThermoAlign.
 
     # Command 1:
-    docker run -t -i drmaize/thermoalign:TA_1.0.0_s bash           
+    docker run -t -i --name thermoalign_test drmaize/thermoalign:TA_1.0.0_s bash           
 
 ![alt tag](https://github.com/drmaize/ThermoAlign/blob/master/images/docker_screen_shot.png)
 
-This will pull TA_1.0.0_s from docker hub, generate a new ThermoAlign container in your local machine and open the container where commands can be executed. If the image is already present in your local system and you run the same command, Docker will create a new container. Re-entering an existing container is described in the section below called <a href="#dockerized">Going Further: ThermoAlign is Dockerized</a>.
+This will pull TA_1.0.0_s from docker hub, generate a new ThermoAlign container in your local machine and open the container where commands can be executed. Here we used the --name command to name the container "thermoalign_test", which is helpful for tracking your containers. If the image is already present in your local system and you run the same command, Docker will create a new container (but it won't let you do this if the name is identical). Re-entering an existing container is described in the section below called <a href="#dockerized">Going Further: ThermoAlign is Dockerized</a>.
 
     # Command 2: move to TA_codes directory
     cd TA_codes/
@@ -71,7 +71,7 @@ The next steps show you how to copy the ThermoAlign results from the Docker cont
 Output Files
 </h1>
 
-All output files will be saved in a directory named based on the timestamp of TA_year-month-date-time format (for example :TA_2016-09-13T09_05_00_545957). Each output file name will start with the same timestamp. 
+All output files will be saved in a directory named based on the timestamp of TA_year-month-date-time format (for example :TA_2016-09-13T09_05_00_545957). Each output file name from a given run will have the same timestamp. 
 
 ###  _The Target Region Selection (TRS) module:_
 
@@ -170,26 +170,25 @@ TA_1.0.0_d is the version most users will probably want, which requires inputtin
 
 Containers existing on your machine are in either an open or closed state. This can be determined with the following command:
 
-    # the -a flag will list all (open and closed) containers
+    # the -a flag will list all (open and closed) containers and their names
     docker ps -a
     
-If the container is in an open state (does not say "exited" in the status column), use the following command with the desired container id specified:
+If the container is in an open state (does not say "exited" in the status column), use the following command with the desired name or container id specified:
 
-    docker exec -it <container_id> bash
+    docker exec -it <name|container_id> bash
     
-If the container is in an exited status, use the following command with the desired container id specified:
+If the container is in an exited status, use the following command with the desired name or container id specified:
 
-    docker start <container_id>
+    docker start <name|container_id>
     
     # followed by 
     
-    docker exec -it <container_id> bash
+    docker exec -it <name|container_id> bash
 
 A container may be deleted using the name or container ID:
 
-    docker rm <container_id|name>
-    
-    
+    docker rm <name|container_id>
+
 Further details on Docker commands can be found at the following sites:
 >https://docs.docker.com/engine/reference/commandline/
 >https://sites.google.com/site/felixfranciersite/blogs/docker
