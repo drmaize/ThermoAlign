@@ -71,7 +71,7 @@ Output Files
 
 All output files will be saved in a directory named based on the timestamp of TA_year-month-date-time format (for example :TA_2016-09-13T09_05_00_545957). Each output file name will start with the same timestamp. 
 
-###  _The TRS module:_
+###  _The Target Region Selection (TRS) module:_
 
 Output file with detailed summary statistics from the run:
 
@@ -81,7 +81,7 @@ Sequence in fasta format with masked variant sites:
 
 >TA_2016-09-13T09_05_00_545957_3_33000_2001_VariantMasked.fasta
 
-###  _The UOD module:_
+###  _The Unique Oligo Design (UOD) module:_
 
 <i>.fasta</i> file of all possible primers (+ and - strands) for the given UOD paramters:
 
@@ -111,7 +111,7 @@ Sequence in fasta format with masked variant sites:
 
 >TA_2016-09-13T09_05_00_545957_UOD_out4_1.fasta
 
-###  _The PSE module:_
+###  _The Primer Specificity Evaluation (PSE) module:_
 
 <i>.csv</i> file with thermoalignment information for + strand primers:
 
@@ -125,7 +125,7 @@ Sequence in fasta format with masked variant sites:
 
 >TA_2016-09-13T09_05_00_545957_PSE_out3_1.csv
 
-###  _The PPS module:_
+###  _The Primer Pair Selection (PPS) module:_
 
 <i>.txt</i> file of all possible primer pairs for the user defined parameters and their relevant information:
 
@@ -241,6 +241,5 @@ and then,
     
     docker run -t -i drmaize/thermoalign:TA_1.0.0_d bash
 
-
-
+<br>
                                     ##### END OF README #####
