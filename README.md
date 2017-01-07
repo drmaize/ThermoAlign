@@ -1,6 +1,6 @@
 Overview of ThermoAlign
 ================================================
-ThermoAlign is a genome-aware oligonucleotide design algorithm embedded within a distributable tool designed for targeted resequencing. ThermoAlign's applications range from basic PCR primer pair design to the design of multiplexed primer pairs constituting amplicon tiling paths across a long segment (e.g. 50 kb) in the genome. Every possible primer in the target region is considered. Prior SNP and indel information can be included to facilitate the design of oligonucleotides across monomorprhic sequences. Using a reference genome sequence, BLAST is used to perform genome-wide searches for sequences similar to each candidate primer. For each off-target hit, the melting temperature (Tm) is estimated. To obtain accurate estimates of the Tm, the local alignment of each BLAST hit is used as a seed to create full-length primer-template alignments&#8212;<i>thermoalignments</i>&#8212;from which the Tm is computed. Oligonucleotides with sufficiently greater melting temperatures than all of its predicted off-target binding sites are identified and reported. A directed graph analysis (shortest path algorithm) is used to identify the minimum number of primer pairs forming an amplicon tiling path providing the greatest coverage across a target region.
+ThermoAlign is a genome-aware oligonucleotide design algorithm embedded within a distributable tool designed for targeted resequencing. ThermoAlign's applications range from basic PCR primer pair design to the design of multiplexed primer pairs constituting amplicon tiling paths across a long segment (e.g. 50 kb) in the genome. Every possible primer in the target region is considered. Prior SNP and indel information can be included to facilitate the design of oligonucleotides across monomorphic sequences. Using a reference genome sequence, BLAST is used to perform genome-wide searches for sequences similar to each candidate primer. For each off-target hit, the melting temperature (Tm) is estimated. To obtain accurate estimates of the Tm, the local alignment of each BLAST hit is used as a seed to create full-length primer-template alignments&#8212;<i>thermoalignments</i>&#8212;from which the Tm is computed. Oligonucleotides with sufficiently greater melting temperatures than all of its predicted off-target binding sites are identified and reported. A directed graph analysis (shortest path algorithm) is used to identify the minimum number of primer pairs forming an amplicon tiling path providing the greatest coverage across a target region.
 
 Licensing and access
 ================================================
@@ -30,7 +30,7 @@ This will pull TA_1.0.0_s from docker hub, generate a new ThermoAlign container 
     # Command 3: perform one-time preprocessing of vcf files in "../sample_vcf" directory
     python vcf_conversion.py
     
-Standard default parameters are preset, but users can modify the parameters.py file to adjust design parameters in each module of ThermoAlign. The the Docker images include a vim text editor so that users may modify the parameters file. Have a look at the parameters file using the following command:
+Standard default parameters are preset, but users can modify the parameters.py file to adjust design parameters in each module of ThermoAlign. The Docker images include a vim text editor so that users may modify the parameters file. Have a look at the parameters file using the following command:
 
     # Command 4 (optional): the vim editor can be used to modify design parameters 
     # type "i" to insert/modify values; use the "Esc" keyboard button followed by ":x" to save and quit.
@@ -61,7 +61,7 @@ The next steps show you how to copy the ThermoAlign results from the Docker cont
     
     # Here is an example of the actual command, which needs to be edited to reflect details on your machine.
     docker cp 44a8a1fe2bff:/TA_codes/TA_2016-09-16T16_24_05_130340 /Users/ffx/Documents/ThermoAlign_results
-    # replace "44a8a1fe2bff" with the docker contaiener id on your machine; 
+    # replace "44a8a1fe2bff" with the docker container id on your machine; 
     # replace "TA_2016-09-16T16_24_05_130340" with the directory name of the output folder in the container;
     # replace "/Users/ffx/Documents/TA_results" with the local path where you want to copy the output to.
 
@@ -162,7 +162,7 @@ Going Further: ThermoAlign is Dockerized
 * TA_1.0.0_d is a general distributable version which requires user supplied files (reference sequence and variant data)
 * TA_1.0.0_Zm3 is a maize-ready version containing all components required for running ThermoAlign as described by Francis et al. #######.
 
-TA_1.0.0_d is the version most users will probably want, which requires inputting of the <a href="#refgenome">reference genome</a> and (opriotnally) <a href="#variants">variant data</a>. This is described below.
+TA_1.0.0_d is the version most users will probably want, which requires inputting of the <a href="#refgenome">reference genome</a> and (optionally) <a href="#variants">variant data</a>. This is described below.
 
 ###  _Opening an existing container_
 
