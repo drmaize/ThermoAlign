@@ -225,7 +225,7 @@ The <i>.vcf</i> file needs to be provided as separate files for each chromosome,
 >chr1.vcf, chr2.vcf, etc.
 
 A file may be copied from your local directory to a docker container by:
-    docker cp foo.txt mycontainer:/foo.txt
+    docker cp foo.txt <name|container_id>:/foo.txt
 
 Advanced Use
 ================================================
