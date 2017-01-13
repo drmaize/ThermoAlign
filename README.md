@@ -224,6 +224,11 @@ A <i>.vcf</i> file (v4.0 or v4.1) based on the same coordinate system as the ref
 The <i>.vcf</i> file needs to be provided as separate files for each chromosome, named as follows:
 >chr1.vcf, chr2.vcf, etc.
 
+
+<h1 id="add files">
+Adding external files to your container
+</h1>
+
 A file may be copied from your local directory to a docker container by:
     
     docker cp foo.txt <name|container_id>:/foo.txt
