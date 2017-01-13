@@ -1,16 +1,21 @@
-##########################################################
-### User input parameters for Thermo-Align primer design
-##########################################################
+############################################################
+### User input parameters for Thermo-Align primer design ###
+############################################################
 
 ### path to required files
 refDB_path          =   "../sample_genome/"
 variant_path        =   "../sample_vcf/processed_vcf_files/"
 multiplx_path       =   "../"
 
+
+############################################################
+### TARGET REGION SELECTION ################################
+############################################################
+
 ## target region selection 
 chr_no                  =   3       # fast test
-start_pos               =   3000     # fast test
-stop_pos                =   5000    # fast test
+start_pos               =   33000     # fast test
+stop_pos                =   35000    # fast test
 no_chrs_in_genome       =   3       # specify the number of chromosomes in the genome used
 variant_mask_condition  =   1       #(1:Yes; 0:No)   
 flanking_primers        =   0       #(1:Yes; 0:No)
@@ -28,6 +33,11 @@ K                   =   50     #mM
 Tris                =   10     #mM
 Mg                  =   1.5    #mM  
 dNTPs               =   0.2    #mM  
+
+
+############################################################
+### UNIQUE OLIGO DESIGN ####################################
+############################################################
 
 ### primer features
 self_Tmdiff         =   20
@@ -47,6 +57,11 @@ em_max_target_seqs  =   2
 em_max_hsps         =   2
 em_num_threads      =   5
 
+
+############################################################
+### PRIMER SPECIFICITY EVALUATION ##########################
+############################################################
+
 ### blastn parameters for mis-prime(mp) search
 mp_e_value          =   30000
 mp_gapopen          =   2                                                                  
@@ -57,6 +72,11 @@ mp_num_threads      =   5
 mp_perc_identity    =   70
 mp_max_target_seqs  =   3 ## ***** set to the total number of input fasta sequences *****
 mp_max_hsps         =   20
+
+
+############################################################
+### PRIMER PAIR SELECTION ##################################
+############################################################
 
 ### primer pair picking parameters                               
 amplicon_size_min   =   100
@@ -76,6 +96,3 @@ multiplx_calcscores =   "12345"     #(1->Primer-primer both 3-p ends; 2->Primer-
 grouping_stringency =   "normal"    #(low/normal/high)
 maxgroups           =   1000       
 maxitemsingroup     =   1000
-
-
-
