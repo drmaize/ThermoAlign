@@ -231,7 +231,7 @@ Adding external files to your container
 
 A file may be copied from your local directory to a docker container by:
     
-    docker cp yourfile.txt <name|container_id>:/yourfile.txt
+    docker cp /yourlocaldirectory/filename.txt <name|container_id>:/filename.txt
 
 Advanced Use
 ================================================
