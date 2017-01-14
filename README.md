@@ -34,7 +34,7 @@ This will pull TA_1.0.0_s from docker hub, generate a new ThermoAlign container 
     
 Standard default parameters are preset, but users can modify the parameters.py file to adjust design parameters in each module of ThermoAlign. The Docker images include a vim text editor so that users may modify the parameters file. Have a look at the parameters file using the following command:
 
-    # Command 4 (optional): the vim editor can be used to modify design parameters 
+    # Command 4 (optional): the vim editor (or nano) can be used to modify design parameters 
     # type "i" to insert/modify values; use the "Esc" keyboard button followed by ":x" to save and quit.
     vim parameters.py
     
