@@ -45,14 +45,6 @@ Once you've exited from vim/nano, ThermoAlign can be run from the TA_codes direc
     # Command 5: run ThermoAlign
     ./pipeline.sh
     
-    
-    
-    nano parameters.py
-    
-    
-  
-  
-    
 
 ![alt tag](https://github.com/drmaize/ThermoAlign/blob/master/images/docker_screen_shot_2.png)
 
