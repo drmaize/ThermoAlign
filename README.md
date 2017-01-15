@@ -38,7 +38,7 @@ Standard default parameters are preset, but users can modify the parameters.py f
     # for vim users: type "i" to insert/modify values; use the "Esc" keyboard button followed by ":x" to save and quit.
     vim parameters.py
     
-    # nano users may start editting the file directly. (nano parameters.py)
+    # Alternatively, nano users may start editting the file directly after opening the file using nano. (nano parameters.py)
     
 Once you've exited from vim/nano, ThermoAlign can be run from the TA_codes directory.
     
