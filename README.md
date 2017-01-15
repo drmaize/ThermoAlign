@@ -34,14 +34,25 @@ This will pull TA_1.0.0_s from docker hub, generate a new ThermoAlign container 
     
 Standard default parameters are preset, but users can modify the parameters.py file to adjust design parameters in each module of ThermoAlign. The Docker images include a vim text editor so that users may modify the parameters file. Have a look at the parameters file using the following command:
 
-    # Command 4 (optional): the vim (or nano) editor can be used to modify design parameters 
-    # type "i" to insert/modify values; use the "Esc" keyboard button followed by ":x" to save and quit.
+    # Command 4 (optional): the vim (or nano) editor can be used to modify design parameters
+    # for vim users: type "i" to insert/modify values; use the "Esc" keyboard button followed by ":x" to save and quit.
     vim parameters.py
     
-Once you've exited from vim, ThermoAlign can be run from the TA_codes directory.
+    # for nano users, start editting the file directly.
+    
+Once you've exited from vim/nano, ThermoAlign can be run from the TA_codes directory.
     
     # Command 5: run ThermoAlign
     ./pipeline.sh
+    
+    
+    
+    nano parameters.py
+    
+    
+  
+  
+    
 
 ![alt tag](https://github.com/drmaize/ThermoAlign/blob/master/images/docker_screen_shot_2.png)
 
