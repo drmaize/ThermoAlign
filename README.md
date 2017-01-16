@@ -197,6 +197,7 @@ A container may be deleted using the name or container ID:
 
 Further details on Docker commands can be found at the following sites:
 >https://docs.docker.com/engine/reference/commandline/
+
 >https://sites.google.com/site/felixfranciersite/blogs/docker
 
 ###  _Running ThermoAlign natively_
