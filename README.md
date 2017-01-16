@@ -262,4 +262,11 @@ and then,
 
 <br>
 
+### _ThermoAlignments schematic:_
+
+![alt tag](https://github.com/drmaize/ThermoAlign/blob/master/images/ThermoAlign.png)
+
+
+
+
                                         ##### END OF README #####
