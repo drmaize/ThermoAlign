@@ -2,7 +2,7 @@ Overview of ThermoAlign
 ================================================
 ThermoAlign is a genome-aware oligonucleotide design algorithm embedded within a distributable tool designed for targeted resequencing. ThermoAlign's applications range from basic PCR primer pair design to the design of multiplexed primer pairs constituting amplicon tiling paths across a long segment (e.g. 50 kb) in the genome. Every possible primer in the target region is considered. Prior SNP and indel information can be included to facilitate the design of oligonucleotides across monomorphic sequences. 
 
-Using a reference genome sequence, BLAST is used to perform genome-wide searches for sequences similar to each candidate primer. For each off-target hit, the melting temperature (Tm) is estimated. To obtain accurate estimates of the Tm, the local alignment of each BLAST hit is used as a seed to create full-length primer-template alignments&#8212;[<i>thermoalignments</i>&#8212;](https://github.com/drmaize/ThermoAlign/blob/master/README.md#thermoalignments-schematic) from which the Tm is computed. Oligonucleotides with sufficiently greater melting temperatures than all of its predicted off-target binding sites are identified and reported. A directed graph analysis (shortest path algorithm) is used to identify the minimum number of primer pairs forming an amplicon tiling path providing the greatest coverage across a target region.
+Using a reference genome sequence, BLAST is used to perform genome-wide searches for sequences similar to each candidate primer. For each off-target hit, the melting temperature (Tm) is estimated. To obtain accurate estimates of the Tm, the local alignment of each BLAST hit is used as a seed to create full-length primer-template alignments&#8212;<i>thermoalignments</i>&#8212; from which the Tm is computed. Oligonucleotides with sufficiently greater melting temperatures than all of its predicted off-target binding sites are identified and reported. A directed graph analysis (shortest path algorithm) is used to identify the minimum number of primer pairs forming an amplicon tiling path providing the greatest coverage across a target region.
 
 Licensing and access
 ================================================
@@ -263,12 +263,5 @@ and then,
     docker run -t -i drmaize/thermoalign:TA_1.0.0_d bash
 
 <br>
-
-### _ThermoAlignments schematic:_
-
-![alt tag](https://github.com/drmaize/ThermoAlign/blob/master/images/ThermoAlign.png)
-
-
-
 
                                         ##### END OF README #####
