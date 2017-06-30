@@ -1,6 +1,10 @@
 ### Santalucia_NN_Tm; a part of Thermo-Align tool for the design of template specific hybridization and priming oligonucleotides
-### Version 1.0.0: 06/28/2016
-### Authors: Felix Francis (felixfrancier@gmail.com); Randall J. Wisser (rjw@udel.edu)  
+### Updated: version-1.05 06/29/2017
+### Property of Wisser Lab at University of Delaware
+### Author: Felix Francis (felixfrancier@gmail.com)
+#    Copyright (C) 2016-2030 by
+#    Felix Francis <felixfrancier@gmail.com>
+#    All rights reserved.
 
 ############################################################
 #### IMPORT FUNCTIONS
@@ -73,7 +77,7 @@ DNA_TMM_table = {
 	'CT/GC': (-3.9, -10.6), 'GC/CT': (-4.9, -13.5), 'GT/CC': (-3.0, -7.8), 
 	'TC/AT': (-2.5, -6.3), 'TT/AC': (-0.7, -1.2), 
 	'AA/TG': (-1.9, -4.4), 'AG/TA': (-2.5, -5.9), 'CA/GG': (-3.9, -9.6), 
-	'CG/GA': (-6.0, -15.5), 'GA/CG': (-4.3, -11.1), ' GG/CA': (-4.6, -11.4), 
+	'CG/GA': (-6.0, -15.5), 'GA/CG': (-4.3, -11.1), 'GG/CA': (-4.6, -11.4), 
 	'TA/AG': (-2.0, -4.7), 'TG/AA': (-2.4, -5.8), 
 	'AG/TT': (-3.2, -8.7), 'AT/TG': (-3.5, -9.4), 'CG/GT': (-3.8, -9.0), 
 	'CT/GG': (-6.6, -18.7), 'GG/CT': (-5.7, -15.9), 'GT/CG': (-5.9, -16.1), 
@@ -202,7 +206,8 @@ def NN_Tm(seq=None, compl_seq=None, primer_conc=0, Na=0, K=0, Tris=0, Mg=0, dNTP
 		dS += DNA_TMM_table[left_tmm][dS_index]
 		temp_compl_seq	= temp_compl_seq[1:]
 		temp_seq		= temp_seq[1:]
-	right_tmm	= temp_compl_seq[-2:] + '/' + temp_seq[-2:]
+	# right_tmm	= temp_compl_seq[-2:] + '/' + temp_seq[-2:]
+	right_tmm	= temp_seq[-2:] + '/' + temp_compl_seq[-2:] 
 	if right_tmm in DNA_TMM_table:
 		dH += DNA_TMM_table[right_tmm][dH_index]
 		dS += DNA_TMM_table[right_tmm][dS_index]	
@@ -244,3 +249,6 @@ def NN_Tm(seq=None, compl_seq=None, primer_conc=0, Na=0, K=0, Tris=0, Mg=0, dNTP
 	Tm	= 	(1000* dH) / (dS + (R * (math.log(primer_conc/x)))) - 273.15 
 	return ("{0:.2f}".format(round(Tm,2)))								# Round to 2 decimals
 
+
+### Updated: version-1.05 06/29/2017
+# "right_tmm" definition modified
