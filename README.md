@@ -264,4 +264,10 @@ and then,
 
 <br>
 
+
+
+### _UPDATES_ 
+Santalucia_NN_Tm.py:	right_tmm definition modified (Updated: version-1.05 06/29/2017)
+
+
                                         ##### END OF README #####
