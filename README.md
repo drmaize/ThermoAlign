@@ -30,6 +30,8 @@ This will pull TA_1.0.0_s from docker hub, generate a new ThermoAlign container 
     cd TA_codes/
     
     # Command 3: perform one-time preprocessing of vcf files in "../sample_vcf" directory
+    # This is used for the example to demonstrate the option of using a vcf file to filter primers at variant sites
+    # Later on, when using your real data, skip this step if you do not use a vcf file  
     python vcf_conversion.py
     
 Standard default parameters are preset, but users can modify the parameters.py file to adjust design parameters in each module of ThermoAlign. The Docker images include a vim text editor so that users may modify the parameters file. Have a look at the parameters file using the following command:
