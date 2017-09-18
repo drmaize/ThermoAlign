@@ -167,7 +167,9 @@ Going Further: ThermoAlign is Dockerized
 
 * TA_1.0.0_s is a sample run version containing a small set of sample files that can be used to test ThermoAlign
 * TA_1.0.0_d is a general distributable version which requires user supplied files (reference sequence and variant data)
-* TA_1.0.0_Zm3 is a maize-ready version containing all components required for running ThermoAlign as described by Francis et al. #######.
+* TA_1.0.0_Zm3 is a maize-ready version containing all components required for running ThermoAlign as described by Francis et al. (https://www.nature.com/articles/srep44437).
+* TA_1.0.0_Zm4 is a maize-ready version for the B73 v4 release
+* TA_1.0.0_Human_GRCh38 is a human-ready version for the GRCh38 release
 
 TA_1.0.0_d is the version most users will probably want, which requires inputting of the <a href="#refgenome">reference genome</a> and (optionally) <a href="#variants">variant data</a>. This is described below.
 
