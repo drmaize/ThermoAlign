@@ -82,6 +82,7 @@ mp_max_hsps         =   20
 amplicon_size_min   =   100
 amplicon_size_max   =   800
 amplicon_gap_filter =   1       #(1:Yes; 0:No)
+amplicon_min_overlap =   0       
 pair_Tm_diff        =   10        
 pair_GC_diff        =   20        
 pair_misprimeTm_diff=   10
